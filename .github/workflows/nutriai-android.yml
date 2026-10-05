@@ -35,6 +35,24 @@ jobs:
       - name: Unit tests
         run: ./gradlew :domain:test :app:testDebugUnitTest --stacktrace
 
+      - name: Print test failures
+        if: failure()
+        run: |
+          python3 - <<'PY'
+          import glob, xml.etree.ElementTree as E
+          for f in glob.glob('**/build/test-results/**/TEST-*.xml', recursive=True):
+              r = E.parse(f).getroot()
+              for tc in r.findall('testcase'):
+                  for x in tc.findall('failure') + tc.findall('error'):
+                      print('FAILED', r.get('name'), '::', tc.get('name'))
+                      print('\n'.join((x.text or '').splitlines()[:12]))
+                      print('-----')
+          PY
+
+      - name: Print Room schema
+        if: always()
+        run: find app/schemas -name '*.json' -exec sh -c 'echo "SCHEMA_FILE $1"; cat "$1"' _ {} \;
+
       - name: Lint
         run: ./gradlew :app:lintDebug
 
