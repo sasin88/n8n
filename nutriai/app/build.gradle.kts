@@ -131,3 +131,11 @@ dependencies {
     testImplementation(platform(libs.androidx.compose.bom))
     testImplementation(libs.androidx.compose.ui.test.junit4)
 }
+
+// El esquema de Room se genera al compilar (KSP) y las pruebas de migración lo leen como asset:
+// los assets de prueba deben prepararse después de generarlo.
+tasks.configureEach {
+    if (name.contains("DebugUnitTest") && (name.contains("Assets") || name.contains("Resources") || name.contains("Config"))) {
+        dependsOn("kspDebugKotlin")
+    }
+}
