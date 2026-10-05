@@ -1,0 +1,2149 @@
+{
+ "version": 1,
+ "source": "USDA FoodData Central, SR Legacy (dominio público). Recetas: composición aproximada calculada por NutriAI.",
+ "foods": [
+  {
+   "id": "rice_white_cooked",
+   "name": "Arroz blanco cocido",
+   "category": "GRAINS",
+   "aliases": [
+    "arroz",
+    "arroz blanco",
+    "rice",
+    "white rice"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 168878 · Rice, white, long-grain, regular, enriched, cooked",
+   "per100g": {
+    "kcal": 130.0,
+    "protein": 2.69,
+    "carbs": 28.17,
+    "fat": 0.28,
+    "fiber": 0.4
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 158.0,
+     "label": "1 cup"
+    }
+   ]
+  },
+  {
+   "id": "rice_brown_cooked",
+   "name": "Arroz integral cocido",
+   "category": "GRAINS",
+   "aliases": [
+    "arroz integral",
+    "brown rice"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 173263 · Rice, brown, parboiled, cooked, UNCLE BENS",
+   "per100g": {
+    "kcal": 147.0,
+    "protein": 3.09,
+    "carbs": 31.33,
+    "fat": 0.85,
+    "fiber": 1.7
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 155.0,
+     "label": "1 cup"
+    }
+   ]
+  },
+  {
+   "id": "beans_black_cooked",
+   "name": "Frijoles negros cocidos",
+   "category": "LEGUMES",
+   "aliases": [
+    "frijoles",
+    "frijoles negros",
+    "black beans",
+    "beans"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 173735 · Beans, black, mature seeds, cooked, boiled, without salt",
+   "per100g": {
+    "kcal": 132.0,
+    "protein": 8.86,
+    "carbs": 23.71,
+    "fat": 0.54,
+    "fiber": 8.7
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 172.0,
+     "label": "1 cup"
+    }
+   ]
+  },
+  {
+   "id": "beans_red_cooked",
+   "name": "Frijoles rojos cocidos",
+   "category": "LEGUMES",
+   "aliases": [
+    "frijoles rojos",
+    "red beans",
+    "kidney beans"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 175194 · Beans, kidney, red, mature seeds, cooked, boiled, without salt",
+   "per100g": {
+    "kcal": 127.0,
+    "protein": 8.67,
+    "carbs": 22.8,
+    "fat": 0.5,
+    "fiber": 7.4
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 177.0,
+     "label": "1 cup"
+    },
+    {
+     "unit": "TABLESPOON",
+     "grams": 11.0,
+     "label": "1 tbsp"
+    }
+   ]
+  },
+  {
+   "id": "lentils_cooked",
+   "name": "Lentejas cocidas",
+   "category": "LEGUMES",
+   "aliases": [
+    "lentejas",
+    "lentils"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 172421 · Lentils, mature seeds, cooked, boiled, without salt",
+   "per100g": {
+    "kcal": 116.0,
+    "protein": 9.02,
+    "carbs": 20.13,
+    "fat": 0.38,
+    "fiber": 7.9
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 198.0,
+     "label": "1 cup"
+    },
+    {
+     "unit": "TABLESPOON",
+     "grams": 12.3,
+     "label": "1 tbsp"
+    }
+   ]
+  },
+  {
+   "id": "chickpeas_cooked",
+   "name": "Garbanzos cocidos",
+   "category": "LEGUMES",
+   "aliases": [
+    "garbanzos",
+    "chickpeas"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 173757 · Chickpeas (garbanzo beans, bengal gram), mature seeds, cooked, boiled, without salt",
+   "per100g": {
+    "kcal": 164.0,
+    "protein": 8.86,
+    "carbs": 27.42,
+    "fat": 2.59,
+    "fiber": 7.6
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 164.0,
+     "label": "1 cup"
+    }
+   ]
+  },
+  {
+   "id": "chicken_breast_roasted",
+   "name": "Pechuga de pollo asada",
+   "category": "MEAT",
+   "aliases": [
+    "pollo",
+    "pechuga",
+    "pechuga de pollo",
+    "chicken",
+    "chicken breast",
+    "grilled chicken"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 171477 · Chicken, broilers or fryers, breast, meat only, cooked, roasted",
+   "per100g": {
+    "kcal": 165.0,
+    "protein": 31.02,
+    "carbs": 0.0,
+    "fat": 3.57,
+    "fiber": 0.0
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 140.0,
+     "label": "1 cup, chopped or diced"
+    },
+    {
+     "unit": "UNIT",
+     "grams": 172.0,
+     "label": "0.5 breast, bone and skin removed"
+    }
+   ]
+  },
+  {
+   "id": "chicken_thigh_roasted",
+   "name": "Muslo de pollo asado",
+   "category": "MEAT",
+   "aliases": [
+    "muslo de pollo",
+    "chicken thigh"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 172388 · Chicken, broilers or fryers, thigh, meat only, cooked, roasted",
+   "per100g": {
+    "kcal": 179.0,
+    "protein": 24.76,
+    "carbs": 0.0,
+    "fat": 8.15,
+    "fiber": 0.0
+   },
+   "portions": [
+    {
+     "unit": "UNIT",
+     "grams": 116.0,
+     "label": "1 thigh without skin"
+    }
+   ]
+  },
+  {
+   "id": "beef_ground_cooked",
+   "name": "Carne molida de res cocida",
+   "category": "MEAT",
+   "aliases": [
+    "carne molida",
+    "ground beef"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 174032 · Beef, ground, 85% lean meat / 15% fat, patty, cooked, broiled",
+   "per100g": {
+    "kcal": 250.0,
+    "protein": 25.93,
+    "carbs": 0.0,
+    "fat": 15.41,
+    "fiber": 0.0
+   },
+   "portions": [
+    {
+     "unit": "UNIT",
+     "grams": 77.0,
+     "label": "1 patty (yield from 1/4 lb raw meat)"
+    }
+   ]
+  },
+  {
+   "id": "pork_loin_cooked",
+   "name": "Lomo de cerdo cocido",
+   "category": "MEAT",
+   "aliases": [
+    "cerdo",
+    "lomo de cerdo",
+    "chuleta",
+    "pork",
+    "pork chop"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 168233 · Pork, fresh, loin, whole, separable lean only, cooked, roasted",
+   "per100g": {
+    "kcal": 209.0,
+    "protein": 28.62,
+    "carbs": 0.0,
+    "fat": 9.63,
+    "fiber": 0.0
+   },
+   "portions": [
+    {
+     "unit": "UNIT",
+     "grams": 81.0,
+     "label": "1 chop, excluding refuse (yield from 1 raw chop, with refuse, weighing 151 g)"
+    }
+   ]
+  },
+  {
+   "id": "ham_sliced",
+   "name": "Jamón en rebanadas",
+   "category": "MEAT",
+   "aliases": [
+    "jamón",
+    "ham"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 173864 · Ham, sliced, regular (approximately 11% fat)",
+   "per100g": {
+    "kcal": 164.0,
+    "protein": 16.6,
+    "carbs": 3.63,
+    "fat": 8.8,
+    "fiber": 1.3
+   },
+   "portions": [
+    {
+     "unit": "SLICE",
+     "grams": 28.0,
+     "label": "1 slice"
+    }
+   ]
+  },
+  {
+   "id": "fish_tilapia_cooked",
+   "name": "Tilapia cocida",
+   "category": "FISH",
+   "aliases": [
+    "tilapia",
+    "pescado",
+    "fish"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 175177 · Fish, tilapia, cooked, dry heat",
+   "per100g": {
+    "kcal": 128.0,
+    "protein": 26.15,
+    "carbs": 0.0,
+    "fat": 2.65,
+    "fiber": 0.0
+   },
+   "portions": [
+    {
+     "unit": "UNIT",
+     "grams": 87.0,
+     "label": "1 fillet"
+    }
+   ]
+  },
+  {
+   "id": "fish_salmon_cooked",
+   "name": "Salmón cocido",
+   "category": "FISH",
+   "aliases": [
+    "salmón",
+    "salmon"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 175168 · Fish, salmon, Atlantic, farmed, cooked, dry heat",
+   "per100g": {
+    "kcal": 206.0,
+    "protein": 22.1,
+    "carbs": 0.0,
+    "fat": 12.35,
+    "fiber": 0.0
+   },
+   "portions": [
+    {
+     "unit": "UNIT",
+     "grams": 356.0,
+     "label": "0.5 fillet"
+    }
+   ]
+  },
+  {
+   "id": "fish_tuna_canned_water",
+   "name": "Atún en agua (lata)",
+   "category": "FISH",
+   "aliases": [
+    "atún",
+    "tuna"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 173709 · Fish, tuna, light, canned in water, drained solids (Includes foods for USDA's Food Distribution Program)",
+   "per100g": {
+    "kcal": 86.0,
+    "protein": 19.44,
+    "carbs": 0.0,
+    "fat": 0.96,
+    "fiber": 0.0
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 154.0,
+     "label": "1 cup, solid or chunks"
+    }
+   ]
+  },
+  {
+   "id": "shrimp_cooked",
+   "name": "Camarones cocidos",
+   "category": "FISH",
+   "aliases": [
+    "camarones",
+    "camarón",
+    "shrimp"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 175180 · Crustaceans, shrimp, cooked",
+   "per100g": {
+    "kcal": 99.0,
+    "protein": 23.98,
+    "carbs": 0.2,
+    "fat": 0.28,
+    "fiber": null
+   },
+   "portions": []
+  },
+  {
+   "id": "egg_boiled",
+   "name": "Huevo duro",
+   "category": "EGGS",
+   "aliases": [
+    "huevo",
+    "huevo cocido",
+    "huevo duro",
+    "egg",
+    "boiled egg"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 173424 · Egg, whole, cooked, hard-boiled",
+   "per100g": {
+    "kcal": 155.0,
+    "protein": 12.58,
+    "carbs": 1.12,
+    "fat": 10.61,
+    "fiber": 0.0
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 136.0,
+     "label": "1 cup, chopped"
+    },
+    {
+     "unit": "TABLESPOON",
+     "grams": 8.5,
+     "label": "1 tbsp"
+    },
+    {
+     "unit": "UNIT",
+     "grams": 50.0,
+     "label": "1 large"
+    }
+   ]
+  },
+  {
+   "id": "egg_fried",
+   "name": "Huevo frito",
+   "category": "EGGS",
+   "aliases": [
+    "huevo frito",
+    "fried egg"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 173423 · Egg, whole, cooked, fried",
+   "per100g": {
+    "kcal": 196.0,
+    "protein": 13.61,
+    "carbs": 0.83,
+    "fat": 14.84,
+    "fiber": 0.0
+   },
+   "portions": [
+    {
+     "unit": "UNIT",
+     "grams": 46.0,
+     "label": "1 large"
+    }
+   ]
+  },
+  {
+   "id": "egg_scrambled",
+   "name": "Huevos revueltos",
+   "category": "EGGS",
+   "aliases": [
+    "huevos revueltos",
+    "scrambled eggs"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 172187 · Egg, whole, cooked, scrambled",
+   "per100g": {
+    "kcal": 149.0,
+    "protein": 9.99,
+    "carbs": 1.61,
+    "fat": 10.98,
+    "fiber": 0.0
+   },
+   "portions": [
+    {
+     "unit": "UNIT",
+     "grams": 61.0,
+     "label": "1 large"
+    },
+    {
+     "unit": "TABLESPOON",
+     "grams": 13.7,
+     "label": "1 tbsp"
+    },
+    {
+     "unit": "CUP",
+     "grams": 220.0,
+     "label": "1 cup"
+    }
+   ]
+  },
+  {
+   "id": "milk_whole",
+   "name": "Leche entera",
+   "category": "DAIRY",
+   "aliases": [
+    "leche",
+    "milk",
+    "whole milk"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 171265 · Milk, whole, 3.25% milkfat, with added vitamin D",
+   "per100g": {
+    "kcal": 61.0,
+    "protein": 3.15,
+    "carbs": 4.8,
+    "fat": 3.25,
+    "fiber": 0.0
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 244.0,
+     "label": "1 cup"
+    },
+    {
+     "unit": "TABLESPOON",
+     "grams": 15.0,
+     "label": "1 tbsp"
+    }
+   ]
+  },
+  {
+   "id": "milk_2pct",
+   "name": "Leche semidescremada 2%",
+   "category": "DAIRY",
+   "aliases": [
+    "leche semidescremada",
+    "leche 2%",
+    "reduced fat milk"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 171267 · Milk, reduced fat, fluid, 2% milkfat, with added vitamin A and vitamin D",
+   "per100g": {
+    "kcal": 50.0,
+    "protein": 3.3,
+    "carbs": 4.8,
+    "fat": 1.98,
+    "fiber": 0.0
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 244.0,
+     "label": "1 cup"
+    }
+   ]
+  },
+  {
+   "id": "cheese_queso_fresco",
+   "name": "Queso fresco",
+   "category": "DAIRY",
+   "aliases": [
+    "queso",
+    "queso fresco",
+    "queso blanco",
+    "cheese"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 172223 · Cheese, fresh, queso fresco",
+   "per100g": {
+    "kcal": 299.0,
+    "protein": 18.09,
+    "carbs": 2.98,
+    "fat": 23.82,
+    "fiber": 0.0
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 122.0,
+     "label": "1 cup, crumbled"
+    }
+   ]
+  },
+  {
+   "id": "cheese_cheddar",
+   "name": "Queso cheddar",
+   "category": "DAIRY",
+   "aliases": [
+    "queso cheddar",
+    "cheddar"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 170899 · Cheese, cheddar, sharp, sliced",
+   "per100g": {
+    "kcal": 410.0,
+    "protein": 24.25,
+    "carbs": 2.13,
+    "fat": 33.82,
+    "fiber": 0.0
+   },
+   "portions": [
+    {
+     "unit": "SLICE",
+     "grams": 19.0,
+     "label": "1 slice (2/3 oz)"
+    }
+   ]
+  },
+  {
+   "id": "yogurt_plain_whole",
+   "name": "Yogur natural",
+   "category": "DAIRY",
+   "aliases": [
+    "yogur",
+    "yogurt"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 171284 · Yogurt, plain, whole milk",
+   "per100g": {
+    "kcal": 61.0,
+    "protein": 3.47,
+    "carbs": 4.66,
+    "fat": 3.25,
+    "fiber": 0.0
+   },
+   "portions": []
+  },
+  {
+   "id": "sour_cream",
+   "name": "Natilla (crema agria)",
+   "category": "DAIRY",
+   "aliases": [
+    "natilla",
+    "crema agria",
+    "sour cream"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 171257 · Cream, sour, cultured",
+   "per100g": {
+    "kcal": 198.0,
+    "protein": 2.44,
+    "carbs": 4.63,
+    "fat": 19.35,
+    "fiber": 0.0
+   },
+   "portions": [
+    {
+     "unit": "TABLESPOON",
+     "grams": 12.0,
+     "label": "1 tbsp"
+    },
+    {
+     "unit": "CUP",
+     "grams": 230.0,
+     "label": "1 cup"
+    }
+   ]
+  },
+  {
+   "id": "butter_salted",
+   "name": "Mantequilla",
+   "category": "FATS",
+   "aliases": [
+    "mantequilla",
+    "butter"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 173410 · Butter, salted",
+   "per100g": {
+    "kcal": 717.0,
+    "protein": 0.85,
+    "carbs": 0.06,
+    "fat": 81.11,
+    "fiber": 0.0
+   },
+   "portions": [
+    {
+     "unit": "TABLESPOON",
+     "grams": 14.2,
+     "label": "1 tbsp"
+    },
+    {
+     "unit": "CUP",
+     "grams": 227.0,
+     "label": "1 cup"
+    }
+   ]
+  },
+  {
+   "id": "oil_olive",
+   "name": "Aceite de oliva",
+   "category": "FATS",
+   "aliases": [
+    "aceite de oliva",
+    "olive oil"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 171413 · Oil, olive, salad or cooking",
+   "per100g": {
+    "kcal": 884.0,
+    "protein": 0.0,
+    "carbs": 0.0,
+    "fat": 100.0,
+    "fiber": 0.0
+   },
+   "portions": [
+    {
+     "unit": "TABLESPOON",
+     "grams": 13.5,
+     "label": "1 tablespoon"
+    },
+    {
+     "unit": "CUP",
+     "grams": 216.0,
+     "label": "1 cup"
+    },
+    {
+     "unit": "TEASPOON",
+     "grams": 4.5,
+     "label": "1 tsp"
+    }
+   ]
+  },
+  {
+   "id": "oil_vegetable",
+   "name": "Aceite vegetal",
+   "category": "FATS",
+   "aliases": [
+    "aceite",
+    "aceite vegetal",
+    "vegetable oil",
+    "oil"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 172336 · Oil, canola",
+   "per100g": {
+    "kcal": 884.0,
+    "protein": 0.0,
+    "carbs": 0.0,
+    "fat": 100.0,
+    "fiber": 0.0
+   },
+   "portions": [
+    {
+     "unit": "TABLESPOON",
+     "grams": 14.0,
+     "label": "1 tbsp"
+    },
+    {
+     "unit": "CUP",
+     "grams": 218.0,
+     "label": "1 cup"
+    },
+    {
+     "unit": "TEASPOON",
+     "grams": 4.5,
+     "label": "1 tsp"
+    }
+   ]
+  },
+  {
+   "id": "avocado",
+   "name": "Aguacate",
+   "category": "FRUIT",
+   "aliases": [
+    "aguacate",
+    "avocado"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 171705 · Avocados, raw, all commercial varieties",
+   "per100g": {
+    "kcal": 160.0,
+    "protein": 2.0,
+    "carbs": 8.53,
+    "fat": 14.66,
+    "fiber": 6.7
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 150.0,
+     "label": "1 cup, cubes"
+    }
+   ]
+  },
+  {
+   "id": "banana",
+   "name": "Banano",
+   "category": "FRUIT",
+   "aliases": [
+    "banano",
+    "banana",
+    "guineo"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 173944 · Bananas, raw",
+   "per100g": {
+    "kcal": 89.0,
+    "protein": 1.09,
+    "carbs": 22.84,
+    "fat": 0.33,
+    "fiber": 2.6
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 225.0,
+     "label": "1 cup, mashed"
+    },
+    {
+     "unit": "UNIT",
+     "grams": 81.0,
+     "label": "1 extra small (less than 6\" long)"
+    }
+   ]
+  },
+  {
+   "id": "plantain_ripe_fried",
+   "name": "Plátano maduro frito",
+   "category": "FRUIT",
+   "aliases": [
+    "plátano maduro",
+    "plátano frito",
+    "maduro",
+    "fried plantain",
+    "sweet plantain"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 168199 · Plantains, green, fried",
+   "per100g": {
+    "kcal": 309.0,
+    "protein": 1.5,
+    "carbs": 49.17,
+    "fat": 11.81,
+    "fiber": 3.5
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 118.0,
+     "label": "1 cup"
+    },
+    {
+     "unit": "SLICE",
+     "grams": 5.3,
+     "label": "10 slices (1/4\" thick)"
+    }
+   ]
+  },
+  {
+   "id": "plantain_cooked",
+   "name": "Plátano cocido",
+   "category": "FRUIT",
+   "aliases": [
+    "plátano",
+    "plátano cocido",
+    "plantain"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 168216 · Plantains, green, boiled",
+   "per100g": {
+    "kcal": 121.0,
+    "protein": 1.09,
+    "carbs": 29.15,
+    "fat": 0.08,
+    "fiber": 2.6
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 137.0,
+     "label": "1 cup"
+    }
+   ]
+  },
+  {
+   "id": "apple",
+   "name": "Manzana",
+   "category": "FRUIT",
+   "aliases": [
+    "manzana",
+    "apple"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 171688 · Apples, raw, with skin (Includes foods for USDA's Food Distribution Program)",
+   "per100g": {
+    "kcal": 52.0,
+    "protein": 0.26,
+    "carbs": 13.81,
+    "fat": 0.17,
+    "fiber": 2.4
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 125.0,
+     "label": "1 cup, quartered or chopped"
+    },
+    {
+     "unit": "UNIT",
+     "grams": 223.0,
+     "label": "1 large (3-1/4\" dia)"
+    }
+   ]
+  },
+  {
+   "id": "orange",
+   "name": "Naranja",
+   "category": "FRUIT",
+   "aliases": [
+    "naranja",
+    "orange"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 169097 · Oranges, raw, all commercial varieties",
+   "per100g": {
+    "kcal": 47.0,
+    "protein": 0.94,
+    "carbs": 11.75,
+    "fat": 0.12,
+    "fiber": 2.4
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 180.0,
+     "label": "1 cup, sections"
+    },
+    {
+     "unit": "UNIT",
+     "grams": 184.0,
+     "label": "1 large (3-1/16\" dia)"
+    }
+   ]
+  },
+  {
+   "id": "papaya",
+   "name": "Papaya",
+   "category": "FRUIT",
+   "aliases": [
+    "papaya"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 169926 · Papayas, raw",
+   "per100g": {
+    "kcal": 43.0,
+    "protein": 0.47,
+    "carbs": 10.82,
+    "fat": 0.26,
+    "fiber": 1.7
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 145.0,
+     "label": "1 cup 1\" pieces"
+    },
+    {
+     "unit": "UNIT",
+     "grams": 157.0,
+     "label": "1 fruit, small"
+    }
+   ]
+  },
+  {
+   "id": "pineapple",
+   "name": "Piña",
+   "category": "FRUIT",
+   "aliases": [
+    "piña",
+    "pineapple"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 169124 · Pineapple, raw, all varieties",
+   "per100g": {
+    "kcal": 50.0,
+    "protein": 0.54,
+    "carbs": 13.12,
+    "fat": 0.12,
+    "fiber": 1.4
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 165.0,
+     "label": "1 cup, chunks"
+    },
+    {
+     "unit": "UNIT",
+     "grams": 905.0,
+     "label": "1 fruit"
+    },
+    {
+     "unit": "SLICE",
+     "grams": 166.0,
+     "label": "1 slice (4-2/3\" dia x 3/4\" thick)"
+    }
+   ]
+  },
+  {
+   "id": "mango",
+   "name": "Mango",
+   "category": "FRUIT",
+   "aliases": [
+    "mango"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 169910 · Mangos, raw",
+   "per100g": {
+    "kcal": 60.0,
+    "protein": 0.82,
+    "carbs": 14.98,
+    "fat": 0.38,
+    "fiber": 1.6
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 165.0,
+     "label": "1 cup pieces"
+    },
+    {
+     "unit": "UNIT",
+     "grams": 336.0,
+     "label": "1 fruit without refuse"
+    }
+   ]
+  },
+  {
+   "id": "watermelon",
+   "name": "Sandía",
+   "category": "FRUIT",
+   "aliases": [
+    "sandía",
+    "watermelon"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 167765 · Watermelon, raw",
+   "per100g": {
+    "kcal": 30.0,
+    "protein": 0.61,
+    "carbs": 7.55,
+    "fat": 0.15,
+    "fiber": 0.4
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 154.0,
+     "label": "1 cup, balls"
+    }
+   ]
+  },
+  {
+   "id": "strawberries",
+   "name": "Fresas",
+   "category": "FRUIT",
+   "aliases": [
+    "fresas",
+    "fresa",
+    "strawberries"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 167762 · Strawberries, raw",
+   "per100g": {
+    "kcal": 32.0,
+    "protein": 0.67,
+    "carbs": 7.68,
+    "fat": 0.3,
+    "fiber": 2.0
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 152.0,
+     "label": "1 cup, halves"
+    },
+    {
+     "unit": "UNIT",
+     "grams": 27.0,
+     "label": "1 extra large (1-5/8\" dia)"
+    }
+   ]
+  },
+  {
+   "id": "tomato",
+   "name": "Tomate",
+   "category": "VEGETABLES",
+   "aliases": [
+    "tomate",
+    "tomato"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 170457 · Tomatoes, red, ripe, raw, year round average",
+   "per100g": {
+    "kcal": 18.0,
+    "protein": 0.88,
+    "carbs": 3.89,
+    "fat": 0.2,
+    "fiber": 1.2
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 149.0,
+     "label": "1 cup cherry tomatoes"
+    },
+    {
+     "unit": "UNIT",
+     "grams": 182.0,
+     "label": "1 large whole (3\" dia)"
+    },
+    {
+     "unit": "SLICE",
+     "grams": 20.0,
+     "label": "1 slice, medium (1/4\" thick)"
+    }
+   ]
+  },
+  {
+   "id": "lettuce",
+   "name": "Lechuga",
+   "category": "VEGETABLES",
+   "aliases": [
+    "lechuga",
+    "lettuce",
+    "ensalada verde"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 169248 · Lettuce, iceberg (includes crisphead types), raw",
+   "per100g": {
+    "kcal": 14.0,
+    "protein": 0.9,
+    "carbs": 2.97,
+    "fat": 0.14,
+    "fiber": 1.2
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 72.0,
+     "label": "1 cup shredded"
+    },
+    {
+     "unit": "UNIT",
+     "grams": 755.0,
+     "label": "1 head, large"
+    }
+   ]
+  },
+  {
+   "id": "cabbage",
+   "name": "Repollo",
+   "category": "VEGETABLES",
+   "aliases": [
+    "repollo",
+    "cabbage",
+    "col"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 169975 · Cabbage, raw",
+   "per100g": {
+    "kcal": 25.0,
+    "protein": 1.28,
+    "carbs": 5.8,
+    "fat": 0.1,
+    "fiber": 2.5
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 89.0,
+     "label": "1 cup, chopped"
+    },
+    {
+     "unit": "UNIT",
+     "grams": 1248.0,
+     "label": "1 head, large (about 7\" dia)"
+    }
+   ]
+  },
+  {
+   "id": "carrot",
+   "name": "Zanahoria",
+   "category": "VEGETABLES",
+   "aliases": [
+    "zanahoria",
+    "carrot"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 170393 · Carrots, raw",
+   "per100g": {
+    "kcal": 41.0,
+    "protein": 0.93,
+    "carbs": 9.58,
+    "fat": 0.24,
+    "fiber": 2.8
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 128.0,
+     "label": "1 cup chopped"
+    },
+    {
+     "unit": "UNIT",
+     "grams": 72.0,
+     "label": "1 large (7-1/4\" to 8-/1/2\" long)"
+    },
+    {
+     "unit": "SLICE",
+     "grams": 3.0,
+     "label": "1 slice"
+    }
+   ]
+  },
+  {
+   "id": "onion",
+   "name": "Cebolla",
+   "category": "VEGETABLES",
+   "aliases": [
+    "cebolla",
+    "onion"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 170000 · Onions, raw",
+   "per100g": {
+    "kcal": 40.0,
+    "protein": 1.1,
+    "carbs": 9.34,
+    "fat": 0.1,
+    "fiber": 1.7
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 160.0,
+     "label": "1 cup, chopped"
+    },
+    {
+     "unit": "TABLESPOON",
+     "grams": 10.0,
+     "label": "1 tbsp chopped"
+    },
+    {
+     "unit": "UNIT",
+     "grams": 150.0,
+     "label": "1 large"
+    },
+    {
+     "unit": "SLICE",
+     "grams": 38.0,
+     "label": "1 slice, large (1/4\" thick)"
+    }
+   ]
+  },
+  {
+   "id": "cucumber",
+   "name": "Pepino",
+   "category": "VEGETABLES",
+   "aliases": [
+    "pepino",
+    "cucumber"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 168409 · Cucumber, with peel, raw",
+   "per100g": {
+    "kcal": 15.0,
+    "protein": 0.65,
+    "carbs": 3.63,
+    "fat": 0.11,
+    "fiber": 0.5
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 104.0,
+     "label": "0.5 cup slices"
+    }
+   ]
+  },
+  {
+   "id": "sweet_pepper",
+   "name": "Chile dulce",
+   "category": "VEGETABLES",
+   "aliases": [
+    "chile dulce",
+    "pimiento",
+    "bell pepper"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 170427 · Peppers, sweet, green, raw",
+   "per100g": {
+    "kcal": 20.0,
+    "protein": 0.86,
+    "carbs": 4.64,
+    "fat": 0.17,
+    "fiber": 1.7
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 149.0,
+     "label": "1 cup, chopped"
+    },
+    {
+     "unit": "TABLESPOON",
+     "grams": 9.3,
+     "label": "1 tbsp"
+    },
+    {
+     "unit": "UNIT",
+     "grams": 164.0,
+     "label": "1 large (2-1/4 per lb, approx 3-3/4\" long, 3\" dia)"
+    }
+   ]
+  },
+  {
+   "id": "broccoli_cooked",
+   "name": "Brócoli cocido",
+   "category": "VEGETABLES",
+   "aliases": [
+    "brócoli",
+    "broccoli"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 169967 · Broccoli, cooked, boiled, drained, without salt",
+   "per100g": {
+    "kcal": 35.0,
+    "protein": 2.38,
+    "carbs": 7.18,
+    "fat": 0.41,
+    "fiber": 3.3
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 156.0,
+     "label": "0.5 cup, chopped"
+    },
+    {
+     "unit": "UNIT",
+     "grams": 280.0,
+     "label": "1 stalk, large (11\"-12\" long)"
+    }
+   ]
+  },
+  {
+   "id": "chayote_cooked",
+   "name": "Chayote cocido",
+   "category": "VEGETABLES",
+   "aliases": [
+    "chayote"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 170403 · Chayote, fruit, cooked, boiled, drained, without salt",
+   "per100g": {
+    "kcal": 24.0,
+    "protein": 0.62,
+    "carbs": 5.09,
+    "fat": 0.48,
+    "fiber": 2.8
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 160.0,
+     "label": "1 cup (1\" pieces)"
+    }
+   ]
+  },
+  {
+   "id": "corn_cooked",
+   "name": "Maíz (elote) cocido",
+   "category": "VEGETABLES",
+   "aliases": [
+    "maíz",
+    "elote",
+    "corn"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 169999 · Corn, sweet, yellow, cooked, boiled, drained, without salt",
+   "per100g": {
+    "kcal": 96.0,
+    "protein": 3.41,
+    "carbs": 20.98,
+    "fat": 1.5,
+    "fiber": 2.4
+   },
+   "portions": [
+    {
+     "unit": "UNIT",
+     "grams": 89.0,
+     "label": "1 ear small (5-1/2\" to 6-1/2\" long)"
+    },
+    {
+     "unit": "CUP",
+     "grams": 149.0,
+     "label": "1 cup cut"
+    }
+   ]
+  },
+  {
+   "id": "potato_boiled",
+   "name": "Papa cocida",
+   "category": "VEGETABLES",
+   "aliases": [
+    "papa",
+    "papas",
+    "potato"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 170440 · Potatoes, boiled, cooked without skin, flesh, without salt",
+   "per100g": {
+    "kcal": 86.0,
+    "protein": 1.71,
+    "carbs": 20.01,
+    "fat": 0.1,
+    "fiber": 1.8
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 156.0,
+     "label": "0.5 cup"
+    },
+    {
+     "unit": "UNIT",
+     "grams": 300.0,
+     "label": "1 large (3\" to 4-1/4\" dia.)"
+    }
+   ]
+  },
+  {
+   "id": "french_fries",
+   "name": "Papas fritas",
+   "category": "VEGETABLES",
+   "aliases": [
+    "papas fritas",
+    "french fries",
+    "fries"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 170452 · Potatoes, french fried, shoestring, salt added in processing, frozen, oven-heated",
+   "per100g": {
+    "kcal": 194.0,
+    "protein": 2.9,
+    "carbs": 31.66,
+    "fat": 6.76,
+    "fiber": 2.8
+   },
+   "portions": []
+  },
+  {
+   "id": "cassava_raw",
+   "name": "Yuca (cruda)",
+   "category": "VEGETABLES",
+   "aliases": [
+    "yuca",
+    "cassava"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 169985 · Cassava, raw",
+   "per100g": {
+    "kcal": 160.0,
+    "protein": 1.36,
+    "carbs": 38.06,
+    "fat": 0.28,
+    "fiber": 1.8
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 206.0,
+     "label": "1 cup"
+    }
+   ]
+  },
+  {
+   "id": "tortilla_corn",
+   "name": "Tortilla de maíz",
+   "category": "GRAINS",
+   "aliases": [
+    "tortilla",
+    "tortillas",
+    "corn tortilla"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 175036 · Tortillas, ready-to-bake or -fry, corn",
+   "per100g": {
+    "kcal": 218.0,
+    "protein": 5.7,
+    "carbs": 44.64,
+    "fat": 2.85,
+    "fiber": 6.3
+   },
+   "portions": [
+    {
+     "unit": "UNIT",
+     "grams": 24.0,
+     "label": "1 tortilla"
+    }
+   ]
+  },
+  {
+   "id": "tortilla_flour",
+   "name": "Tortilla de harina",
+   "category": "GRAINS",
+   "aliases": [
+    "tortilla de harina",
+    "flour tortilla"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 167535 · Tortillas, ready-to-bake or -fry, flour, shelf stable",
+   "per100g": {
+    "kcal": 297.0,
+    "protein": 8.01,
+    "carbs": 49.27,
+    "fat": 7.58,
+    "fiber": 2.4
+   },
+   "portions": [
+    {
+     "unit": "UNIT",
+     "grams": 49.0,
+     "label": "1 tortilla"
+    }
+   ]
+  },
+  {
+   "id": "bread_white",
+   "name": "Pan blanco",
+   "category": "GRAINS",
+   "aliases": [
+    "pan",
+    "pan blanco",
+    "bread",
+    "white bread"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 174924 · Bread, white, commercially prepared (includes soft bread crumbs)",
+   "per100g": {
+    "kcal": 266.0,
+    "protein": 8.85,
+    "carbs": 49.42,
+    "fat": 3.33,
+    "fiber": 2.7
+   },
+   "portions": [
+    {
+     "unit": "SLICE",
+     "grams": 29.0,
+     "label": "1 slice"
+    },
+    {
+     "unit": "CUP",
+     "grams": 45.0,
+     "label": "1 cup, crumbs"
+    }
+   ]
+  },
+  {
+   "id": "bread_whole_wheat",
+   "name": "Pan integral",
+   "category": "GRAINS",
+   "aliases": [
+    "pan integral",
+    "whole wheat bread"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 172688 · Bread, whole-wheat, commercially prepared",
+   "per100g": {
+    "kcal": 252.0,
+    "protein": 12.45,
+    "carbs": 42.71,
+    "fat": 3.5,
+    "fiber": 6.0
+   },
+   "portions": [
+    {
+     "unit": "SLICE",
+     "grams": 32.0,
+     "label": "1 slice"
+    }
+   ]
+  },
+  {
+   "id": "pasta_cooked",
+   "name": "Pasta cocida",
+   "category": "GRAINS",
+   "aliases": [
+    "pasta",
+    "espagueti",
+    "macarrones",
+    "spaghetti"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 169737 · Pasta, cooked, enriched, without added salt",
+   "per100g": {
+    "kcal": 158.0,
+    "protein": 5.8,
+    "carbs": 30.86,
+    "fat": 0.93,
+    "fiber": 1.8
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 124.0,
+     "label": "1 cup spaghetti not packed"
+    }
+   ]
+  },
+  {
+   "id": "oats_dry",
+   "name": "Avena en hojuelas (cruda)",
+   "category": "GRAINS",
+   "aliases": [
+    "avena",
+    "oats",
+    "oatmeal"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 173904 · Cereals, oats, regular and quick, not fortified, dry",
+   "per100g": {
+    "kcal": 379.0,
+    "protein": 13.15,
+    "carbs": 67.7,
+    "fat": 6.52,
+    "fiber": 10.1
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 81.0,
+     "label": "1 cup"
+    }
+   ]
+  },
+  {
+   "id": "masa_harina",
+   "name": "Harina de maíz para masa",
+   "category": "GRAINS",
+   "aliases": [
+    "masa",
+    "harina de maíz",
+    "masa harina"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 169694 · Corn flour, masa, enriched, white",
+   "per100g": {
+    "kcal": 363.0,
+    "protein": 8.46,
+    "carbs": 76.59,
+    "fat": 3.69,
+    "fiber": 6.4
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 114.0,
+     "label": "1 cup"
+    }
+   ]
+  },
+  {
+   "id": "peanuts_roasted",
+   "name": "Maní tostado",
+   "category": "FATS",
+   "aliases": [
+    "maní",
+    "cacahuate",
+    "peanuts"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 173806 · Peanuts, all types, dry-roasted, without salt",
+   "per100g": {
+    "kcal": 587.0,
+    "protein": 24.35,
+    "carbs": 21.26,
+    "fat": 49.66,
+    "fiber": 8.4
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 146.0,
+     "label": "1 cup"
+    }
+   ]
+  },
+  {
+   "id": "peanut_butter",
+   "name": "Mantequilla de maní",
+   "category": "FATS",
+   "aliases": [
+    "mantequilla de maní",
+    "crema de cacahuate",
+    "peanut butter"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 172470 · Peanut butter, smooth style, without salt",
+   "per100g": {
+    "kcal": 598.0,
+    "protein": 22.21,
+    "carbs": 22.31,
+    "fat": 51.36,
+    "fiber": 5.0
+   },
+   "portions": [
+    {
+     "unit": "TABLESPOON",
+     "grams": 16.0,
+     "label": "2 tbsp"
+    },
+    {
+     "unit": "CUP",
+     "grams": 258.0,
+     "label": "1 cup"
+    }
+   ]
+  },
+  {
+   "id": "almonds",
+   "name": "Almendras",
+   "category": "FATS",
+   "aliases": [
+    "almendras",
+    "almonds"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 170567 · Nuts, almonds",
+   "per100g": {
+    "kcal": 579.0,
+    "protein": 21.15,
+    "carbs": 21.55,
+    "fat": 49.93,
+    "fiber": 12.5
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 143.0,
+     "label": "1 cup, whole"
+    },
+    {
+     "unit": "UNIT",
+     "grams": 28.35,
+     "label": "1 oz (23 whole kernels)"
+    }
+   ]
+  },
+  {
+   "id": "mayonnaise",
+   "name": "Mayonesa",
+   "category": "FATS",
+   "aliases": [
+    "mayonesa",
+    "mayonnaise"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 171009 · Salad dressing, mayonnaise, regular",
+   "per100g": {
+    "kcal": 680.0,
+    "protein": 0.96,
+    "carbs": 0.57,
+    "fat": 74.85,
+    "fiber": 0.0
+   },
+   "portions": [
+    {
+     "unit": "TABLESPOON",
+     "grams": 13.8,
+     "label": "1 tbsp"
+    },
+    {
+     "unit": "CUP",
+     "grams": 220.0,
+     "label": "1 cup"
+    }
+   ]
+  },
+  {
+   "id": "ketchup",
+   "name": "Salsa de tomate (kétchup)",
+   "category": "OTHER",
+   "aliases": [
+    "kétchup",
+    "ketchup",
+    "salsa de tomate"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 168556 · Catsup",
+   "per100g": {
+    "kcal": 101.0,
+    "protein": 1.04,
+    "carbs": 27.4,
+    "fat": 0.1,
+    "fiber": 0.3
+   },
+   "portions": [
+    {
+     "unit": "TABLESPOON",
+     "grams": 17.0,
+     "label": "1 tbsp"
+    },
+    {
+     "unit": "CUP",
+     "grams": 240.0,
+     "label": "1 cup"
+    }
+   ]
+  },
+  {
+   "id": "sugar",
+   "name": "Azúcar",
+   "category": "SWEETS",
+   "aliases": [
+    "azúcar",
+    "sugar"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 169655 · Sugars, granulated",
+   "per100g": {
+    "kcal": 387.0,
+    "protein": 0.0,
+    "carbs": 99.98,
+    "fat": 0.0,
+    "fiber": 0.0
+   },
+   "portions": [
+    {
+     "unit": "TEASPOON",
+     "grams": 4.2,
+     "label": "1 tsp"
+    },
+    {
+     "unit": "CUP",
+     "grams": 200.0,
+     "label": "1 cup"
+    }
+   ]
+  },
+  {
+   "id": "honey",
+   "name": "Miel",
+   "category": "SWEETS",
+   "aliases": [
+    "miel",
+    "honey"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 169640 · Honey",
+   "per100g": {
+    "kcal": 304.0,
+    "protein": 0.3,
+    "carbs": 82.4,
+    "fat": 0.0,
+    "fiber": 0.2
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 339.0,
+     "label": "1 cup"
+    },
+    {
+     "unit": "TABLESPOON",
+     "grams": 21.0,
+     "label": "1 tbsp"
+    }
+   ]
+  },
+  {
+   "id": "chocolate_dark",
+   "name": "Chocolate oscuro 70–85%",
+   "category": "SWEETS",
+   "aliases": [
+    "chocolate",
+    "chocolate oscuro",
+    "dark chocolate"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 170273 · Chocolate, dark, 70-85% cacao solids",
+   "per100g": {
+    "kcal": 598.0,
+    "protein": 7.79,
+    "carbs": 45.9,
+    "fat": 42.63,
+    "fiber": 10.9
+   },
+   "portions": []
+  },
+  {
+   "id": "coffee_brewed",
+   "name": "Café negro",
+   "category": "DRINKS",
+   "aliases": [
+    "café",
+    "café negro",
+    "coffee"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 171890 · Beverages, coffee, brewed, prepared with tap water",
+   "per100g": {
+    "kcal": 1.0,
+    "protein": 0.12,
+    "carbs": 0.0,
+    "fat": 0.02,
+    "fiber": 0.0
+   },
+   "portions": []
+  },
+  {
+   "id": "orange_juice",
+   "name": "Jugo de naranja natural",
+   "category": "DRINKS",
+   "aliases": [
+    "jugo de naranja",
+    "orange juice"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 169098 · Orange juice, raw (Includes foods for USDA's Food Distribution Program)",
+   "per100g": {
+    "kcal": 45.0,
+    "protein": 0.7,
+    "carbs": 10.4,
+    "fat": 0.2,
+    "fiber": 0.2
+   },
+   "portions": [
+    {
+     "unit": "CUP",
+     "grams": 248.0,
+     "label": "1 cup"
+    },
+    {
+     "unit": "UNIT",
+     "grams": 86.0,
+     "label": "1 fruit yields"
+    }
+   ]
+  },
+  {
+   "id": "cola_regular",
+   "name": "Refresco de cola",
+   "category": "DRINKS",
+   "aliases": [
+    "refresco",
+    "gaseosa",
+    "cola",
+    "soda"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 174852 · Beverages, carbonated, cola, regular",
+   "per100g": {
+    "kcal": 42.0,
+    "protein": 0.0,
+    "carbs": 10.36,
+    "fat": 0.25,
+    "fiber": 0.0
+   },
+   "portions": []
+  },
+  {
+   "id": "beer_regular",
+   "name": "Cerveza",
+   "category": "DRINKS",
+   "aliases": [
+    "cerveza",
+    "beer"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 168746 · Alcoholic beverage, beer, regular, all",
+   "per100g": {
+    "kcal": 43.0,
+    "protein": 0.46,
+    "carbs": 3.55,
+    "fat": 0.0,
+    "fiber": 0.0
+   },
+   "portions": []
+  }
+ ],
+ "recipes": [
+  {
+   "id": "cr_gallo_pinto",
+   "name": "Gallo pinto",
+   "countryCode": "CR",
+   "aliases": [
+    "gallo pinto",
+    "pinto"
+   ],
+   "components": [
+    {
+     "foodId": "rice_white_cooked",
+     "grams": 130
+    },
+    {
+     "foodId": "beans_black_cooked",
+     "grams": 100
+    },
+    {
+     "foodId": "oil_vegetable",
+     "grams": 8
+    },
+    {
+     "foodId": "onion",
+     "grams": 10
+    },
+    {
+     "foodId": "sweet_pepper",
+     "grams": 10
+    }
+   ]
+  },
+  {
+   "id": "cr_chifrijo",
+   "name": "Chifrijo",
+   "countryCode": "CR",
+   "aliases": [
+    "chifrijo"
+   ],
+   "components": [
+    {
+     "foodId": "rice_white_cooked",
+     "grams": 100
+    },
+    {
+     "foodId": "beans_red_cooked",
+     "grams": 100
+    },
+    {
+     "foodId": "pork_loin_cooked",
+     "grams": 80
+    },
+    {
+     "foodId": "tomato",
+     "grams": 40
+    },
+    {
+     "foodId": "onion",
+     "grams": 15
+    },
+    {
+     "foodId": "avocado",
+     "grams": 30
+    }
+   ]
+  },
+  {
+   "id": "cr_arroz_con_pollo",
+   "name": "Arroz con pollo",
+   "countryCode": "CR",
+   "aliases": [
+    "arroz con pollo"
+   ],
+   "components": [
+    {
+     "foodId": "rice_white_cooked",
+     "grams": 180
+    },
+    {
+     "foodId": "chicken_thigh_roasted",
+     "grams": 80
+    },
+    {
+     "foodId": "carrot",
+     "grams": 20
+    },
+    {
+     "foodId": "sweet_pepper",
+     "grams": 15
+    },
+    {
+     "foodId": "corn_cooked",
+     "grams": 15
+    },
+    {
+     "foodId": "oil_vegetable",
+     "grams": 5
+    }
+   ]
+  },
+  {
+   "id": "cr_picadillo_papa",
+   "name": "Picadillo de papa",
+   "countryCode": "CR",
+   "aliases": [
+    "picadillo",
+    "picadillo de papa"
+   ],
+   "components": [
+    {
+     "foodId": "potato_boiled",
+     "grams": 150
+    },
+    {
+     "foodId": "beef_ground_cooked",
+     "grams": 40
+    },
+    {
+     "foodId": "onion",
+     "grams": 10
+    },
+    {
+     "foodId": "sweet_pepper",
+     "grams": 10
+    },
+    {
+     "foodId": "oil_vegetable",
+     "grams": 5
+    }
+   ]
+  },
+  {
+   "id": "cr_tamal",
+   "name": "Tamal de cerdo",
+   "countryCode": "CR",
+   "aliases": [
+    "tamal",
+    "tamales"
+   ],
+   "components": [
+    {
+     "foodId": "masa_harina",
+     "grams": 70
+    },
+    {
+     "foodId": "pork_loin_cooked",
+     "grams": 40
+    },
+    {
+     "foodId": "rice_white_cooked",
+     "grams": 20
+    },
+    {
+     "foodId": "oil_vegetable",
+     "grams": 10
+    },
+    {
+     "foodId": "sweet_pepper",
+     "grams": 10
+    }
+   ]
+  }
+ ]
+}
