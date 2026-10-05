@@ -11,6 +11,9 @@ on:
       - '.github/workflows/nutriai-android.yml'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 concurrency:
   group: nutriai-android-${{ github.ref }}
   cancel-in-progress: true
@@ -22,6 +25,9 @@ jobs:
     defaults:
       run:
         working-directory: nutriai
+    env:
+      # URL del backend de IA (variable del repositorio). Vacía = modo demostración.
+      NUTRIAI_AI_BACKEND_URL: ${{ vars.NUTRIAI_AI_BACKEND_URL }}
     steps:
       - uses: actions/checkout@v4
 
@@ -49,15 +55,36 @@ jobs:
                       print('-----')
           PY
 
-      - name: Print Room schema
-        if: always()
-        run: find app/schemas -name '*.json' -exec sh -c 'echo "SCHEMA_FILE $1"; cat "$1"' _ {} \;
-
       - name: Lint
         run: ./gradlew :app:lintDebug
 
-      - name: Build debug APK
-        run: ./gradlew :app:assembleDebug
+      - name: Build APKs
+        run: ./gradlew :app:assembleDebug :app:assembleRelease
+
+      - name: Commit Room schema
+        if: github.event_name == 'push'
+        run: |
+          git add app/schemas
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "chore(nutriai): update exported Room schema"
+          git push origin HEAD:${GITHUB_REF_NAME}
+
+      - name: Publish test release
+        if: github.event_name != 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cp app/build/outputs/apk/release/app-release.apk NutriAI.apk
+          TAG=nutriai-latest
+          NOTES="APK de prueba generado automáticamente desde ${GITHUB_SHA::7}. Firmado con clave de prueba: sirve para instalar y probar, no para publicar en Google Play."
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" NutriAI.apk --clobber
+            gh release edit "$TAG" --notes "$NOTES"
+          else
+            gh release create "$TAG" NutriAI.apk --prerelease --title "NutriAI (versión de prueba)" --notes "$NOTES" --target "$GITHUB_SHA"
+          fi
 
       - uses: actions/upload-artifact@v4
         if: always()
@@ -71,5 +98,5 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         with:
-          name: nutriai-debug-apk
-          path: nutriai/app/build/outputs/apk/debug/*.apk
+          name: nutriai-apk
+          path: nutriai/app/build/outputs/apk/**/*.apk

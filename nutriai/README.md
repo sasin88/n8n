@@ -5,10 +5,24 @@ son **estimaciones**; no sustituye a un profesional de la salud.
 
 ## Estado
 
-| Fase | Contenido | Estado |
-|---|---|---|
-| 1 | Arquitectura y proyecto Android | ✅ |
-| 2–13 | UI, perfiles, Room, cálculos, registro, cámara, IA, historial, privacidad, tests, optimización, APK | Pendiente |
+Todas las fases implementadas. **Cómo probarla:** ver [COMO_PROBAR.md](COMO_PROBAR.md).
+
+| Área | Qué hay |
+|---|---|
+| Perfiles | Perfiles locales sin registro, cambio de perfil, datos separados por perfil |
+| Cálculos | BMR (Mifflin-St Jeor / Harris-Benedict revisada), TDEE, objetivo con mínimo de seguridad, macros, objetivo manual |
+| Comidas | Registro manual, platos compuestos (recetas de Costa Rica), porciones caseras, alimentos propios |
+| IA | Foto (cámara o galería) → identificación → base USDA → revisión del usuario. MOCK visible si no hay backend |
+| Historial | Día / semana / mes, detalle del día, estadísticas, peso con tendencia |
+| Privacidad | Datos solo en el teléfono, sin copias en la nube, fotos temporales, borrado de historial/perfil/todo |
+| Backend | Cloudflare Worker (`backend/`) que guarda la API key en el servidor |
+
+### Pendiente / fuera de alcance de esta versión
+
+- Unidades imperiales (lb, in): la preferencia existe en el modelo, pero la interfaz usa kg/cm.
+- Textos solo en español (sin archivos de traducción todavía).
+- Pruebas de interfaz en emulador real: hoy se ejecutan con Robolectric.
+- APK firmado con clave propia para Google Play (hoy: clave de prueba).
 
 ## Arquitectura
 

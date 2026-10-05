@@ -9,7 +9,10 @@ import androidx.compose.ui.test.assertIsNotEnabled
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
+import androidx.compose.ui.test.onAllNodesWithText
+import androidx.compose.ui.test.onFirst
 import androidx.compose.ui.test.performClick
+import androidx.compose.ui.test.performScrollTo
 import androidx.compose.ui.test.performTextInput
 import com.nutriai.core.ui.theme.NutriAiTheme
 import com.nutriai.domain.model.ActivityLevel
@@ -63,7 +66,8 @@ class UiFlowsTest {
                 ProfileFormContent(state = state, onChange = { state = it(state) }, onSave = { saved = true }, onBack = null)
             }
         }
-        compose.onNodeWithTag("save_profile").performClick()
+        compose.onNodeWithTag("save_profile").performScrollTo().performClick()
+        compose.onNodeWithTag("name").performScrollTo()
         compose.onNodeWithText("Escribe un nombre o apodo").assertExists()
         assertTrue(!saved)
 
@@ -71,10 +75,10 @@ class UiFlowsTest {
         compose.onNodeWithTag("age").performTextInput("35")
         compose.onNodeWithTag("weight").performTextInput("80")
         compose.onNodeWithTag("height").performTextInput("175")
-        compose.onNodeWithText("Hombre").performClick()
-        compose.onNodeWithText("Ejercicio moderado (3–5 días/semana)").performClick()
-        compose.onNodeWithText("Perder peso").performClick()
-        compose.onNodeWithTag("save_profile").performClick()
+        compose.onNodeWithText("Hombre").performScrollTo().performClick()
+        compose.onNodeWithText("Ejercicio moderado (3–5 días/semana)").performScrollTo().performClick()
+        compose.onNodeWithText("Perder peso").performScrollTo().performClick()
+        compose.onNodeWithTag("save_profile").performScrollTo().performClick()
         assertTrue(saved)
     }
 
@@ -99,7 +103,7 @@ class UiFlowsTest {
         }
         compose.onNodeWithText("≈ 1.250 kcal", substring = true).assertExists()
         compose.onNodeWithText("2.000 kcal", substring = true).assertExists()
-        compose.onNodeWithText("750", substring = true).assertExists()
+        compose.onAllNodesWithText("750 kcal").onFirst().assertExists()
         compose.onNodeWithTag("analyze").performClick()
         assertTrue(analyzed)
     }
