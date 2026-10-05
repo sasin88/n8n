@@ -55,7 +55,7 @@ def read_csv(z, name):
 def portion_unit(text):
     t = text.lower()
     if re.search(r"\bfl oz\b", t):
-        return None
+        return "MILLILITER"
     if re.search(r"\bcups?\b", t):
         return "CUP"
     if re.search(r"\btbsp\b|tablespoon", t):
@@ -66,7 +66,7 @@ def portion_unit(text):
         return "SLICE"
     if re.search(r"\bpieces?\b", t):
         return "PIECE"
-    if re.search(r"\b(medium|large|small|each|whole|fruit|breast|thigh|egg|tortilla|patty|chop|fillet)\b", t):
+    if re.search(r"\b(medium|large|small|each|whole|fruit|breast|thigh|egg|tortilla|patty|chop|fillet|can|bottle|container|bar)\b", t):
         return "UNIT"
     return None
 
@@ -127,13 +127,16 @@ def main():
         eq = []
         seen = set()
         for p in portions_by_food.get(f["fdc_id"], []):
-            label = " ".join(x for x in (p.get("amount", ""), p.get("modifier", ""), p.get("portion_description", "")) if x).strip()
-            unit = portion_unit(f'{p.get("modifier", "")} {p.get("portion_description", "")}')
+            text = " ".join(x for x in (p.get("modifier", ""), p.get("portion_description", "")) if x).strip()
+            unit = portion_unit(text)
             try:
                 amount = float(p.get("amount") or 1) or 1
                 grams = float(p["gram_weight"]) / amount
             except (ValueError, ZeroDivisionError):
                 continue
+            if unit == "MILLILITER":
+                grams = grams / 29.5735  # 1 fl oz US = 29.5735 ml
+            label = f"USDA: 1 {text}"
             if unit and unit not in seen and grams > 0:
                 seen.add(unit)
                 eq.append({"unit": unit, "grams": round(grams, 2), "label": label})
