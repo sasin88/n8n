@@ -6,9 +6,7 @@ import androidx.compose.material3.darkColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
-
-/** Preferencia de tema: seguir al sistema o forzar claro/oscuro. */
-enum class ThemeMode { SYSTEM, LIGHT, DARK }
+import com.nutriai.domain.model.ThemeMode
 
 private val LightColors = lightColorScheme(
     primary = Green,

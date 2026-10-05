@@ -35,3 +35,6 @@ enum class ActivityLevel(val multiplier: Double) {
 enum class Goal { LOSE_WEIGHT, MAINTAIN_WEIGHT, GAIN_WEIGHT, GAIN_MUSCLE }
 
 enum class UnitSystem { METRIC, IMPERIAL }
+
+/** Preferencia de tema: seguir al sistema o forzar claro/oscuro. */
+enum class ThemeMode { SYSTEM, LIGHT, DARK }
