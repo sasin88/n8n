@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NutriAI</string>
+    <string name="phase1_title">NutriAI</string>
+    <string name="phase1_subtitle">Base del proyecto lista</string>
+    <string name="phase1_body">Esta es una pantalla temporal de la Fase 1. Las pantallas reales llegan en la Fase 2.</string>
+    <string name="phase1_estimate_note">Las calorías que muestre la app serán siempre estimaciones, no mediciones médicas.</string>
+</resources>
