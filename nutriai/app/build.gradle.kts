@@ -70,8 +70,9 @@ android {
     }
 
     sourceSets {
-        // Esquemas de Room exportados, usados por las pruebas de migración.
-        getByName("test").assets.srcDir("$projectDir/schemas")
+        // Esquemas de Room exportados, usados por las pruebas de migración (Robolectric lee los
+        // assets de la variante debug). No se incluyen en el APK de release.
+        getByName("debug").assets.srcDir("$projectDir/schemas")
     }
 }
 
@@ -135,7 +136,7 @@ dependencies {
 // El esquema de Room se genera al compilar (KSP) y las pruebas de migración lo leen como asset:
 // los assets de prueba deben prepararse después de generarlo.
 tasks.configureEach {
-    if (name.contains("DebugUnitTest") && (name.contains("Assets") || name.contains("Resources") || name.contains("Config"))) {
+    if (name == "mergeDebugAssets" || (name.contains("DebugUnitTest") && (name.contains("Assets") || name.contains("Config")))) {
         dependsOn("kspDebugKotlin")
     }
 }
