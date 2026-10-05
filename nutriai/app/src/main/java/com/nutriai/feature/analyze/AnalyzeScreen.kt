@@ -56,7 +56,7 @@ class AnalyzeViewModel @Inject constructor(
     private val network: NetworkMonitor,
 ) : ViewModel() {
     val noticeAccepted: StateFlow<Boolean?> = settings.settings.map { it.aiPhotoNoticeAccepted }
-        .stateIn(viewModelScope, SharingStarted.Eagerly, null)
+        .stateIn<Boolean?>(viewModelScope, SharingStarted.Eagerly, null)
     val isMock: Boolean get() = service.isMock
     fun needsInternetButOffline(): Boolean = service.requiresNetwork && !network.isOnline()
 
@@ -81,7 +81,7 @@ fun AnalyzeScreen(
     val picker = rememberLauncherForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri -> uri?.let(onImagePicked) }
     val launchGallery = { picker.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly)) }
 
-    fun run(action: PendingAction) {
+    fun start(action: PendingAction) {
         if (viewModel.needsInternetButOffline()) { offline = true; return }
         if (accepted != true) { pending = action; return }
         if (action == PendingAction.CAMERA) onCamera() else launchGallery()
@@ -108,8 +108,8 @@ fun AnalyzeScreen(
                 NoticeCard("El análisis por foto necesita conexión a Internet.")
             }
             if (offline) NoticeCard("Sin conexión a Internet no podemos analizar fotos. Puedes registrar la comida manualmente.", isWarning = true)
-            AppearIn(0) { Option("📷", "Tomar una foto", "Usa la cámara para fotografiar tu plato.") { run(PendingAction.CAMERA) } }
-            AppearIn(1) { Option("🖼️", "Elegir de la galería", "Selecciona una foto que ya tengas.") { run(PendingAction.GALLERY) } }
+            AppearIn(0) { Option("📷", "Tomar una foto", "Usa la cámara para fotografiar tu plato.") { start(PendingAction.CAMERA) } }
+            AppearIn(1) { Option("🖼️", "Elegir de la galería", "Selecciona una foto que ya tengas.") { start(PendingAction.GALLERY) } }
             AppearIn(2) { Option("✍️", "Escribir lo que comí", "Busca los alimentos y elige las cantidades.", onManual) }
             Text(
                 "Consejo: fotografía el plato desde arriba, con buena luz y sin otros objetos.",

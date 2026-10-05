@@ -114,7 +114,7 @@ fun QuantityDialog(
 ) {
     val units = remember(food) { PortionConverter.supportedUnits(food) }
     var unit by remember { mutableStateOf(initialUnit?.takeIf { it in units } ?: MealDraft.defaultUnit(food)) }
-    var text by remember { mutableStateOf(initialQuantity?.let { Labels.formatNumber(it).replace(",", ".") } ?: "") }
+    var text by remember { mutableStateOf(initialQuantity?.let(Labels::plain) ?: "") }
     val quantity = text.replace(',', '.').toDoubleOrNull()
     val preview = quantity?.let { PortionConverter.buildItem(food, it, unit) }
 
@@ -132,7 +132,7 @@ fun QuantityDialog(
                     quickOptions(unit).forEach { option ->
                         FilterChip(
                             selected = quantity == option,
-                            onClick = { text = Labels.formatNumber(option).replace(",", ".") },
+                            onClick = { text = Labels.plain(option) },
                             label = { Text(Labels.quantity(option, unit)) },
                         )
                     }

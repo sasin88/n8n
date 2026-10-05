@@ -48,6 +48,7 @@ jobs:
           path: |
             nutriai/**/build/reports/
             nutriai/**/build/test-results/
+            nutriai/app/schemas/
           if-no-files-found: ignore
 
       - uses: actions/upload-artifact@v4

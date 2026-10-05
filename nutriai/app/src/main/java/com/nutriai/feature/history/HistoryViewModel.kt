@@ -93,6 +93,7 @@ class HistoryViewModel @Inject constructor(
             HistoryPeriod.WEEK -> anchor.plusWeeks(steps)
             HistoryPeriod.MONTH -> anchor.plusMonths(steps)
         }
-        period to minOf(next, clock.today())
+        val today = clock.today()
+        period to if (next.isAfter(today)) today else next
     }
 }

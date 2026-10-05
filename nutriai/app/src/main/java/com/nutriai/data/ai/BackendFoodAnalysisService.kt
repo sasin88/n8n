@@ -36,7 +36,7 @@ class BackendFoodAnalysisService(
     override val requiresNetwork = true
     override val isMock = false
 
-    private val json = Json { ignoreUnknownKeys = true; explicitNulls = false }
+    private val json = Json { ignoreUnknownKeys = true }
 
     override suspend fun analyze(image: AnalysisImage): AppResult<FoodAnalysis> = withContext(ioDispatcher) {
         if (!network.isOnline()) return@withContext AppResult.Failure(AppError.NoInternet)

@@ -5,6 +5,7 @@ import com.nutriai.data.local.FoodDao
 import com.nutriai.data.local.FoodEntity
 import com.nutriai.data.local.FoodPortionEntity
 import com.nutriai.data.local.RecipeComponentEntity
+import com.nutriai.data.repository.toReferenceStub
 import com.nutriai.data.settings.SettingsRepository
 import com.nutriai.domain.model.FoodCategory
 import com.nutriai.domain.model.NutrientBasis

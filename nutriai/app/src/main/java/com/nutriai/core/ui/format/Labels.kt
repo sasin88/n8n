@@ -137,6 +137,10 @@ object Labels {
         if (abs(value - value.roundToInt()) < 0.05) value.roundToInt().formatThousands()
         else String.format(es, "%.1f", value)
 
+    /** Número para campos de texto editables (sin separador de miles, punto decimal). */
+    fun plain(value: Double): String =
+        if (abs(value - value.roundToInt()) < 0.001) value.roundToInt().toString() else ((value * 10).roundToInt() / 10.0).toString()
+
     fun weight(kg: Double) = String.format(es, "%.1f kg", kg)
 
     private fun Int.formatThousands(): String = String.format(es, "%,d", this)

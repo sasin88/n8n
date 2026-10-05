@@ -134,7 +134,7 @@ fun WeightScreen(viewModel: WeightViewModel = hiltViewModel()) {
     }
 
     if (adding) {
-        var text by remember { mutableStateOf(state.profile?.weightKg?.let { Labels.formatNumber(it).replace(",", ".") } ?: "") }
+        var text by remember { mutableStateOf(state.profile?.weightKg?.let(Labels::plain) ?: "") }
         val value = text.replace(',', '.').toDoubleOrNull()?.takeIf { it in 20.0..400.0 }
         AlertDialog(
             onDismissRequest = { adding = false },

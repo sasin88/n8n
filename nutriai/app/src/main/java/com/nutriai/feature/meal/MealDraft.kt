@@ -74,13 +74,15 @@ data class MealDraft(
             detected.map { d ->
                 val match = FoodMatcher.bestMatch(d.name, catalog)
                 val food = match?.food
-                val unitOk = food != null && d.unit != null && d.estimatedQuantity != null &&
-                    PortionConverter.toBaseAmount(d.estimatedQuantity, d.unit, food) != null
+                val quantity = d.estimatedQuantity
+                val unit = d.unit
+                val unitOk = food != null && unit != null && quantity != null &&
+                    PortionConverter.toBaseAmount(quantity, unit, food) != null
                 DraftItem(
                     key = nextKey(),
                     food = food,
-                    quantity = if (unitOk) d.estimatedQuantity else null,
-                    unit = if (unitOk) d.unit else food?.let { defaultUnit(it) },
+                    quantity = if (unitOk) quantity else null,
+                    unit = if (unitOk) unit else food?.let { defaultUnit(it) },
                     detectedName = d.name,
                     aiConfidence = d.confidence,
                     needsReview = d.isUncertain || food == null || (match?.score ?: 0.0) < CONFIDENT_MATCH,
