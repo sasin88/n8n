@@ -25,7 +25,7 @@
     {
      "unit": "CUP",
      "grams": 158.0,
-     "label": "1 cup"
+     "label": "USDA: 1 cup"
     }
    ]
   },
@@ -38,19 +38,19 @@
     "brown rice"
    ],
    "source": "USDA_FDC",
-   "sourceReference": "FDC 173263 · Rice, brown, parboiled, cooked, UNCLE BENS",
+   "sourceReference": "FDC 169704 · Rice, brown, long-grain, cooked (Includes foods for USDA's Food Distribution Program)",
    "per100g": {
-    "kcal": 147.0,
-    "protein": 3.09,
-    "carbs": 31.33,
-    "fat": 0.85,
-    "fiber": 1.7
+    "kcal": 123.0,
+    "protein": 2.74,
+    "carbs": 25.58,
+    "fat": 0.97,
+    "fiber": 1.6
    },
    "portions": [
     {
      "unit": "CUP",
-     "grams": 155.0,
-     "label": "1 cup"
+     "grams": 202.0,
+     "label": "USDA: 1 cup"
     }
    ]
   },
@@ -77,7 +77,7 @@
     {
      "unit": "CUP",
      "grams": 172.0,
-     "label": "1 cup"
+     "label": "USDA: 1 cup"
     }
    ]
   },
@@ -103,12 +103,12 @@
     {
      "unit": "CUP",
      "grams": 177.0,
-     "label": "1 cup"
+     "label": "USDA: 1 cup"
     },
     {
      "unit": "TABLESPOON",
      "grams": 11.0,
-     "label": "1 tbsp"
+     "label": "USDA: 1 tbsp"
     }
    ]
   },
@@ -133,12 +133,12 @@
     {
      "unit": "CUP",
      "grams": 198.0,
-     "label": "1 cup"
+     "label": "USDA: 1 cup"
     },
     {
      "unit": "TABLESPOON",
      "grams": 12.3,
-     "label": "1 tbsp"
+     "label": "USDA: 1 tbsp"
     }
    ]
   },
@@ -163,7 +163,7 @@
     {
      "unit": "CUP",
      "grams": 164.0,
-     "label": "1 cup"
+     "label": "USDA: 1 cup"
     }
    ]
   },
@@ -192,12 +192,12 @@
     {
      "unit": "CUP",
      "grams": 140.0,
-     "label": "1 cup, chopped or diced"
+     "label": "USDA: 1 cup, chopped or diced"
     },
     {
      "unit": "UNIT",
      "grams": 172.0,
-     "label": "0.5 breast, bone and skin removed"
+     "label": "USDA: 1 breast, bone and skin removed"
     }
    ]
   },
@@ -222,7 +222,7 @@
     {
      "unit": "UNIT",
      "grams": 116.0,
-     "label": "1 thigh without skin"
+     "label": "USDA: 1 thigh without skin"
     }
    ]
   },
@@ -247,9 +247,32 @@
     {
      "unit": "UNIT",
      "grams": 77.0,
-     "label": "1 patty (yield from 1/4 lb raw meat)"
+     "label": "USDA: 1 patty (yield from 1/4 lb raw meat)"
     }
    ]
+  },
+  {
+   "id": "beef_steak_cooked",
+   "name": "Bistec de res a la plancha",
+   "category": "MEAT",
+   "aliases": [
+    "bistec",
+    "carne de res",
+    "carne",
+    "res",
+    "beef",
+    "steak"
+   ],
+   "source": "USDA_FDC",
+   "sourceReference": "FDC 168635 · Beef, top sirloin, steak, separable lean only, trimmed to 0\" fat, choice, cooked, broiled",
+   "per100g": {
+    "kcal": 188.0,
+    "protein": 30.29,
+    "carbs": 0.0,
+    "fat": 6.55,
+    "fiber": 0.0
+   },
+   "portions": []
   },
   {
    "id": "pork_loin_cooked",
@@ -275,7 +298,7 @@
     {
      "unit": "UNIT",
      "grams": 81.0,
-     "label": "1 chop, excluding refuse (yield from 1 raw chop, with refuse, weighing 151 g)"
+     "label": "USDA: 1 chop, excluding refuse (yield from 1 raw chop, with refuse, weighing 151 g)"
     }
    ]
   },
@@ -300,7 +323,7 @@
     {
      "unit": "SLICE",
      "grams": 28.0,
-     "label": "1 slice"
+     "label": "USDA: 1 slice"
     }
    ]
   },
@@ -326,7 +349,7 @@
     {
      "unit": "UNIT",
      "grams": 87.0,
-     "label": "1 fillet"
+     "label": "USDA: 1 fillet"
     }
    ]
   },
@@ -351,7 +374,7 @@
     {
      "unit": "UNIT",
      "grams": 356.0,
-     "label": "0.5 fillet"
+     "label": "USDA: 1 fillet"
     }
    ]
   },
@@ -374,9 +397,14 @@
    },
    "portions": [
     {
+     "unit": "UNIT",
+     "grams": 165.0,
+     "label": "USDA: 1 can"
+    },
+    {
      "unit": "CUP",
      "grams": 154.0,
-     "label": "1 cup, solid or chunks"
+     "label": "USDA: 1 cup, solid or chunks"
     }
    ]
   },
@@ -424,17 +452,17 @@
     {
      "unit": "CUP",
      "grams": 136.0,
-     "label": "1 cup, chopped"
+     "label": "USDA: 1 cup, chopped"
     },
     {
      "unit": "TABLESPOON",
      "grams": 8.5,
-     "label": "1 tbsp"
+     "label": "USDA: 1 tbsp"
     },
     {
      "unit": "UNIT",
      "grams": 50.0,
-     "label": "1 large"
+     "label": "USDA: 1 large"
     }
    ]
   },
@@ -459,7 +487,7 @@
     {
      "unit": "UNIT",
      "grams": 46.0,
-     "label": "1 large"
+     "label": "USDA: 1 large"
     }
    ]
   },
@@ -484,17 +512,17 @@
     {
      "unit": "UNIT",
      "grams": 61.0,
-     "label": "1 large"
+     "label": "USDA: 1 large"
     },
     {
      "unit": "TABLESPOON",
      "grams": 13.7,
-     "label": "1 tbsp"
+     "label": "USDA: 1 tbsp"
     },
     {
      "unit": "CUP",
      "grams": 220.0,
-     "label": "1 cup"
+     "label": "USDA: 1 cup"
     }
    ]
   },
@@ -520,12 +548,17 @@
     {
      "unit": "CUP",
      "grams": 244.0,
-     "label": "1 cup"
+     "label": "USDA: 1 cup"
+    },
+    {
+     "unit": "MILLILITER",
+     "grams": 1.03,
+     "label": "USDA: 1 fl oz"
     },
     {
      "unit": "TABLESPOON",
      "grams": 15.0,
-     "label": "1 tbsp"
+     "label": "USDA: 1 tbsp"
     }
    ]
   },
@@ -551,7 +584,12 @@
     {
      "unit": "CUP",
      "grams": 244.0,
-     "label": "1 cup"
+     "label": "USDA: 1 cup"
+    },
+    {
+     "unit": "MILLILITER",
+     "grams": 1.03,
+     "label": "USDA: 1 fl oz"
     }
    ]
   },
@@ -578,7 +616,7 @@
     {
      "unit": "CUP",
      "grams": 122.0,
-     "label": "1 cup, crumbled"
+     "label": "USDA: 1 cup, crumbled"
     }
    ]
   },
@@ -603,7 +641,7 @@
     {
      "unit": "SLICE",
      "grams": 19.0,
-     "label": "1 slice (2/3 oz)"
+     "label": "USDA: 1 slice (2/3 oz)"
     }
    ]
   },
@@ -624,7 +662,18 @@
     "fat": 3.25,
     "fiber": 0.0
    },
-   "portions": []
+   "portions": [
+    {
+     "unit": "UNIT",
+     "grams": 170.0,
+     "label": "USDA: 1 container (6 oz)"
+    },
+    {
+     "unit": "MILLILITER",
+     "grams": 8.28,
+     "label": "USDA: 1 cup (8 fl oz)"
+    }
+   ]
   },
   {
    "id": "sour_cream",
@@ -648,12 +697,12 @@
     {
      "unit": "TABLESPOON",
      "grams": 12.0,
-     "label": "1 tbsp"
+     "label": "USDA: 1 tbsp"
     },
     {
      "unit": "CUP",
      "grams": 230.0,
-     "label": "1 cup"
+     "label": "USDA: 1 cup"
     }
    ]
   },
@@ -678,12 +727,12 @@
     {
      "unit": "TABLESPOON",
      "grams": 14.2,
-     "label": "1 tbsp"
+     "label": "USDA: 1 tbsp"
     },
     {
      "unit": "CUP",
      "grams": 227.0,
-     "label": "1 cup"
+     "label": "USDA: 1 cup"
     }
    ]
   },
@@ -708,17 +757,17 @@
     {
      "unit": "TABLESPOON",
      "grams": 13.5,
-     "label": "1 tablespoon"
+     "label": "USDA: 1 tablespoon"
     },
     {
      "unit": "CUP",
      "grams": 216.0,
-     "label": "1 cup"
+     "label": "USDA: 1 cup"
     },
     {
      "unit": "TEASPOON",
      "grams": 4.5,
-     "label": "1 tsp"
+     "label": "USDA: 1 tsp"
     }
    ]
   },
@@ -745,17 +794,17 @@
     {
      "unit": "TABLESPOON",
      "grams": 14.0,
-     "label": "1 tbsp"
+     "label": "USDA: 1 tbsp"
     },
     {
      "unit": "CUP",
      "grams": 218.0,
-     "label": "1 cup"
+     "label": "USDA: 1 cup"
     },
     {
      "unit": "TEASPOON",
      "grams": 4.5,
-     "label": "1 tsp"
+     "label": "USDA: 1 tsp"
     }
    ]
   },
@@ -780,7 +829,7 @@
     {
      "unit": "CUP",
      "grams": 150.0,
-     "label": "1 cup, cubes"
+     "label": "USDA: 1 cup, cubes"
     }
    ]
   },
@@ -806,12 +855,12 @@
     {
      "unit": "CUP",
      "grams": 225.0,
-     "label": "1 cup, mashed"
+     "label": "USDA: 1 cup, mashed"
     },
     {
      "unit": "UNIT",
      "grams": 81.0,
-     "label": "1 extra small (less than 6\" long)"
+     "label": "USDA: 1 extra small (less than 6\" long)"
     }
    ]
   },
@@ -827,34 +876,30 @@
     "sweet plantain"
    ],
    "source": "USDA_FDC",
-   "sourceReference": "FDC 168199 · Plantains, green, fried",
+   "sourceReference": "FDC 168200 · Plantains, yellow, fried, Latino restaurant",
    "per100g": {
-    "kcal": 309.0,
-    "protein": 1.5,
-    "carbs": 49.17,
-    "fat": 11.81,
-    "fiber": 3.5
+    "kcal": 236.0,
+    "protein": 1.42,
+    "carbs": 40.77,
+    "fat": 7.51,
+    "fiber": 3.2
    },
    "portions": [
     {
      "unit": "CUP",
-     "grams": 118.0,
-     "label": "1 cup"
-    },
-    {
-     "unit": "SLICE",
-     "grams": 5.3,
-     "label": "10 slices (1/4\" thick)"
+     "grams": 169.0,
+     "label": "USDA: 1 cup"
     }
    ]
   },
   {
    "id": "plantain_cooked",
-   "name": "Plátano cocido",
+   "name": "Plátano verde cocido",
    "category": "FRUIT",
    "aliases": [
-    "plátano",
+    "plátano verde",
     "plátano cocido",
+    "green plantain",
     "plantain"
    ],
    "source": "USDA_FDC",
@@ -870,7 +915,7 @@
     {
      "unit": "CUP",
      "grams": 137.0,
-     "label": "1 cup"
+     "label": "USDA: 1 cup"
     }
    ]
   },
@@ -895,12 +940,12 @@
     {
      "unit": "CUP",
      "grams": 125.0,
-     "label": "1 cup, quartered or chopped"
+     "label": "USDA: 1 cup, quartered or chopped"
     },
     {
      "unit": "UNIT",
      "grams": 223.0,
-     "label": "1 large (3-1/4\" dia)"
+     "label": "USDA: 1 large (3-1/4\" dia)"
     }
    ]
   },
@@ -925,12 +970,12 @@
     {
      "unit": "CUP",
      "grams": 180.0,
-     "label": "1 cup, sections"
+     "label": "USDA: 1 cup, sections"
     },
     {
      "unit": "UNIT",
      "grams": 184.0,
-     "label": "1 large (3-1/16\" dia)"
+     "label": "USDA: 1 large (3-1/16\" dia)"
     }
    ]
   },
@@ -954,12 +999,12 @@
     {
      "unit": "CUP",
      "grams": 145.0,
-     "label": "1 cup 1\" pieces"
+     "label": "USDA: 1 cup 1\" pieces"
     },
     {
      "unit": "UNIT",
      "grams": 157.0,
-     "label": "1 fruit, small"
+     "label": "USDA: 1 fruit, small"
     }
    ]
   },
@@ -984,17 +1029,17 @@
     {
      "unit": "CUP",
      "grams": 165.0,
-     "label": "1 cup, chunks"
+     "label": "USDA: 1 cup, chunks"
     },
     {
      "unit": "UNIT",
      "grams": 905.0,
-     "label": "1 fruit"
+     "label": "USDA: 1 fruit"
     },
     {
      "unit": "SLICE",
      "grams": 166.0,
-     "label": "1 slice (4-2/3\" dia x 3/4\" thick)"
+     "label": "USDA: 1 slice (4-2/3\" dia x 3/4\" thick)"
     }
    ]
   },
@@ -1018,12 +1063,12 @@
     {
      "unit": "CUP",
      "grams": 165.0,
-     "label": "1 cup pieces"
+     "label": "USDA: 1 cup pieces"
     },
     {
      "unit": "UNIT",
      "grams": 336.0,
-     "label": "1 fruit without refuse"
+     "label": "USDA: 1 fruit without refuse"
     }
    ]
   },
@@ -1048,7 +1093,7 @@
     {
      "unit": "CUP",
      "grams": 154.0,
-     "label": "1 cup, balls"
+     "label": "USDA: 1 cup, balls"
     }
    ]
   },
@@ -1074,12 +1119,12 @@
     {
      "unit": "CUP",
      "grams": 152.0,
-     "label": "1 cup, halves"
+     "label": "USDA: 1 cup, halves"
     },
     {
      "unit": "UNIT",
      "grams": 27.0,
-     "label": "1 extra large (1-5/8\" dia)"
+     "label": "USDA: 1 extra large (1-5/8\" dia)"
     }
    ]
   },
@@ -1104,17 +1149,17 @@
     {
      "unit": "CUP",
      "grams": 149.0,
-     "label": "1 cup cherry tomatoes"
+     "label": "USDA: 1 cup cherry tomatoes"
     },
     {
      "unit": "UNIT",
      "grams": 182.0,
-     "label": "1 large whole (3\" dia)"
+     "label": "USDA: 1 large whole (3\" dia)"
     },
     {
      "unit": "SLICE",
      "grams": 20.0,
-     "label": "1 slice, medium (1/4\" thick)"
+     "label": "USDA: 1 slice, medium (1/4\" thick)"
     }
    ]
   },
@@ -1140,12 +1185,12 @@
     {
      "unit": "CUP",
      "grams": 72.0,
-     "label": "1 cup shredded"
+     "label": "USDA: 1 cup shredded"
     },
     {
      "unit": "UNIT",
      "grams": 755.0,
-     "label": "1 head, large"
+     "label": "USDA: 1 head, large"
     }
    ]
   },
@@ -1171,12 +1216,12 @@
     {
      "unit": "CUP",
      "grams": 89.0,
-     "label": "1 cup, chopped"
+     "label": "USDA: 1 cup, chopped"
     },
     {
      "unit": "UNIT",
      "grams": 1248.0,
-     "label": "1 head, large (about 7\" dia)"
+     "label": "USDA: 1 head, large (about 7\" dia)"
     }
    ]
   },
@@ -1201,17 +1246,17 @@
     {
      "unit": "CUP",
      "grams": 128.0,
-     "label": "1 cup chopped"
+     "label": "USDA: 1 cup chopped"
     },
     {
      "unit": "UNIT",
      "grams": 72.0,
-     "label": "1 large (7-1/4\" to 8-/1/2\" long)"
+     "label": "USDA: 1 large (7-1/4\" to 8-/1/2\" long)"
     },
     {
      "unit": "SLICE",
      "grams": 3.0,
-     "label": "1 slice"
+     "label": "USDA: 1 slice"
     }
    ]
   },
@@ -1236,22 +1281,22 @@
     {
      "unit": "CUP",
      "grams": 160.0,
-     "label": "1 cup, chopped"
+     "label": "USDA: 1 cup, chopped"
     },
     {
      "unit": "TABLESPOON",
      "grams": 10.0,
-     "label": "1 tbsp chopped"
+     "label": "USDA: 1 tbsp chopped"
     },
     {
      "unit": "UNIT",
      "grams": 150.0,
-     "label": "1 large"
+     "label": "USDA: 1 large"
     },
     {
      "unit": "SLICE",
      "grams": 38.0,
-     "label": "1 slice, large (1/4\" thick)"
+     "label": "USDA: 1 slice, large (1/4\" thick)"
     }
    ]
   },
@@ -1276,7 +1321,7 @@
     {
      "unit": "CUP",
      "grams": 104.0,
-     "label": "0.5 cup slices"
+     "label": "USDA: 1 cup slices"
     }
    ]
   },
@@ -1302,17 +1347,17 @@
     {
      "unit": "CUP",
      "grams": 149.0,
-     "label": "1 cup, chopped"
+     "label": "USDA: 1 cup, chopped"
     },
     {
      "unit": "TABLESPOON",
      "grams": 9.3,
-     "label": "1 tbsp"
+     "label": "USDA: 1 tbsp"
     },
     {
      "unit": "UNIT",
      "grams": 164.0,
-     "label": "1 large (2-1/4 per lb, approx 3-3/4\" long, 3\" dia)"
+     "label": "USDA: 1 large (2-1/4 per lb, approx 3-3/4\" long, 3\" dia)"
     }
    ]
   },
@@ -1337,12 +1382,12 @@
     {
      "unit": "CUP",
      "grams": 156.0,
-     "label": "0.5 cup, chopped"
+     "label": "USDA: 1 cup, chopped"
     },
     {
      "unit": "UNIT",
      "grams": 280.0,
-     "label": "1 stalk, large (11\"-12\" long)"
+     "label": "USDA: 1 stalk, large (11\"-12\" long)"
     }
    ]
   },
@@ -1366,7 +1411,7 @@
     {
      "unit": "CUP",
      "grams": 160.0,
-     "label": "1 cup (1\" pieces)"
+     "label": "USDA: 1 cup (1\" pieces)"
     }
    ]
   },
@@ -1392,12 +1437,12 @@
     {
      "unit": "UNIT",
      "grams": 89.0,
-     "label": "1 ear small (5-1/2\" to 6-1/2\" long)"
+     "label": "USDA: 1 ear small (5-1/2\" to 6-1/2\" long)"
     },
     {
      "unit": "CUP",
      "grams": 149.0,
-     "label": "1 cup cut"
+     "label": "USDA: 1 cup cut"
     }
    ]
   },
@@ -1423,12 +1468,12 @@
     {
      "unit": "CUP",
      "grams": 156.0,
-     "label": "0.5 cup"
+     "label": "USDA: 1 cup"
     },
     {
      "unit": "UNIT",
      "grams": 300.0,
-     "label": "1 large (3\" to 4-1/4\" dia.)"
+     "label": "USDA: 1 large (3\" to 4-1/4\" dia.)"
     }
    ]
   },
@@ -1473,7 +1518,7 @@
     {
      "unit": "CUP",
      "grams": 206.0,
-     "label": "1 cup"
+     "label": "USDA: 1 cup"
     }
    ]
   },
@@ -1499,7 +1544,7 @@
     {
      "unit": "UNIT",
      "grams": 24.0,
-     "label": "1 tortilla"
+     "label": "USDA: 1 tortilla"
     }
    ]
   },
@@ -1524,7 +1569,7 @@
     {
      "unit": "UNIT",
      "grams": 49.0,
-     "label": "1 tortilla"
+     "label": "USDA: 1 tortilla"
     }
    ]
   },
@@ -1551,12 +1596,12 @@
     {
      "unit": "SLICE",
      "grams": 29.0,
-     "label": "1 slice"
+     "label": "USDA: 1 slice"
     },
     {
      "unit": "CUP",
      "grams": 45.0,
-     "label": "1 cup, crumbs"
+     "label": "USDA: 1 cup, crumbs"
     }
    ]
   },
@@ -1581,7 +1626,7 @@
     {
      "unit": "SLICE",
      "grams": 32.0,
-     "label": "1 slice"
+     "label": "USDA: 1 slice"
     }
    ]
   },
@@ -1608,7 +1653,7 @@
     {
      "unit": "CUP",
      "grams": 124.0,
-     "label": "1 cup spaghetti not packed"
+     "label": "USDA: 1 cup spaghetti not packed"
     }
    ]
   },
@@ -1634,7 +1679,7 @@
     {
      "unit": "CUP",
      "grams": 81.0,
-     "label": "1 cup"
+     "label": "USDA: 1 cup"
     }
    ]
   },
@@ -1660,7 +1705,7 @@
     {
      "unit": "CUP",
      "grams": 114.0,
-     "label": "1 cup"
+     "label": "USDA: 1 cup"
     }
    ]
   },
@@ -1686,7 +1731,7 @@
     {
      "unit": "CUP",
      "grams": 146.0,
-     "label": "1 cup"
+     "label": "USDA: 1 cup"
     }
    ]
   },
@@ -1712,12 +1757,12 @@
     {
      "unit": "TABLESPOON",
      "grams": 16.0,
-     "label": "2 tbsp"
+     "label": "USDA: 1 tbsp"
     },
     {
      "unit": "CUP",
      "grams": 258.0,
-     "label": "1 cup"
+     "label": "USDA: 1 cup"
     }
    ]
   },
@@ -1742,12 +1787,12 @@
     {
      "unit": "CUP",
      "grams": 143.0,
-     "label": "1 cup, whole"
+     "label": "USDA: 1 cup, whole"
     },
     {
      "unit": "UNIT",
      "grams": 28.35,
-     "label": "1 oz (23 whole kernels)"
+     "label": "USDA: 1 oz (23 whole kernels)"
     }
    ]
   },
@@ -1772,12 +1817,12 @@
     {
      "unit": "TABLESPOON",
      "grams": 13.8,
-     "label": "1 tbsp"
+     "label": "USDA: 1 tbsp"
     },
     {
      "unit": "CUP",
      "grams": 220.0,
-     "label": "1 cup"
+     "label": "USDA: 1 cup"
     }
    ]
   },
@@ -1803,12 +1848,12 @@
     {
      "unit": "TABLESPOON",
      "grams": 17.0,
-     "label": "1 tbsp"
+     "label": "USDA: 1 tbsp"
     },
     {
      "unit": "CUP",
      "grams": 240.0,
-     "label": "1 cup"
+     "label": "USDA: 1 cup"
     }
    ]
   },
@@ -1833,12 +1878,12 @@
     {
      "unit": "TEASPOON",
      "grams": 4.2,
-     "label": "1 tsp"
+     "label": "USDA: 1 tsp"
     },
     {
      "unit": "CUP",
      "grams": 200.0,
-     "label": "1 cup"
+     "label": "USDA: 1 cup"
     }
    ]
   },
@@ -1863,12 +1908,12 @@
     {
      "unit": "CUP",
      "grams": 339.0,
-     "label": "1 cup"
+     "label": "USDA: 1 cup"
     },
     {
      "unit": "TABLESPOON",
      "grams": 21.0,
-     "label": "1 tbsp"
+     "label": "USDA: 1 tbsp"
     }
    ]
   },
@@ -1890,7 +1935,13 @@
     "fat": 42.63,
     "fiber": 10.9
    },
-   "portions": []
+   "portions": [
+    {
+     "unit": "UNIT",
+     "grams": 101.0,
+     "label": "USDA: 1 bar"
+    }
+   ]
   },
   {
    "id": "coffee_brewed",
@@ -1910,7 +1961,13 @@
     "fat": 0.02,
     "fiber": 0.0
    },
-   "portions": []
+   "portions": [
+    {
+     "unit": "MILLILITER",
+     "grams": 1.0,
+     "label": "USDA: 1 fl oz"
+    }
+   ]
   },
   {
    "id": "orange_juice",
@@ -1933,12 +1990,17 @@
     {
      "unit": "CUP",
      "grams": 248.0,
-     "label": "1 cup"
+     "label": "USDA: 1 cup"
+    },
+    {
+     "unit": "MILLILITER",
+     "grams": 1.05,
+     "label": "USDA: 1 fl oz"
     },
     {
      "unit": "UNIT",
      "grams": 86.0,
-     "label": "1 fruit yields"
+     "label": "USDA: 1 fruit yields"
     }
    ]
   },
@@ -1961,7 +2023,13 @@
     "fat": 0.25,
     "fiber": 0.0
    },
-   "portions": []
+   "portions": [
+    {
+     "unit": "MILLILITER",
+     "grams": 1.04,
+     "label": "USDA: 1 fl oz"
+    }
+   ]
   },
   {
    "id": "beer_regular",
@@ -1980,7 +2048,18 @@
     "fat": 0.0,
     "fiber": 0.0
    },
-   "portions": []
+   "portions": [
+    {
+     "unit": "MILLILITER",
+     "grams": 1.0,
+     "label": "USDA: 1 fl oz"
+    },
+    {
+     "unit": "UNIT",
+     "grams": 356.0,
+     "label": "USDA: 1 can"
+    }
+   ]
   }
  ],
  "recipes": [
@@ -2012,6 +2091,44 @@
     {
      "foodId": "sweet_pepper",
      "grams": 10
+    }
+   ]
+  },
+  {
+   "id": "cr_casado",
+   "name": "Casado",
+   "countryCode": "CR",
+   "aliases": [
+    "casado"
+   ],
+   "components": [
+    {
+     "foodId": "rice_white_cooked",
+     "grams": 150
+    },
+    {
+     "foodId": "beans_black_cooked",
+     "grams": 100
+    },
+    {
+     "foodId": "beef_steak_cooked",
+     "grams": 100
+    },
+    {
+     "foodId": "lettuce",
+     "grams": 30
+    },
+    {
+     "foodId": "tomato",
+     "grams": 30
+    },
+    {
+     "foodId": "cabbage",
+     "grams": 30
+    },
+    {
+     "foodId": "plantain_ripe_fried",
+     "grams": 80
     }
    ]
   },
@@ -2111,6 +2228,45 @@
     {
      "foodId": "oil_vegetable",
      "grams": 5
+    }
+   ]
+  },
+  {
+   "id": "cr_olla_de_carne",
+   "name": "Olla de carne",
+   "countryCode": "CR",
+   "aliases": [
+    "olla de carne",
+    "sopa de res"
+   ],
+   "components": [
+    {
+     "foodId": "beef_steak_cooked",
+     "grams": 120
+    },
+    {
+     "foodId": "potato_boiled",
+     "grams": 80
+    },
+    {
+     "foodId": "cassava_raw",
+     "grams": 80
+    },
+    {
+     "foodId": "chayote_cooked",
+     "grams": 60
+    },
+    {
+     "foodId": "carrot",
+     "grams": 40
+    },
+    {
+     "foodId": "corn_cooked",
+     "grams": 60
+    },
+    {
+     "foodId": "plantain_cooked",
+     "grams": 60
     }
    ]
   },
