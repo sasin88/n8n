@@ -39,7 +39,13 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
 
       - name: Unit tests
-        run: ./gradlew :domain:test :app:testDebugUnitTest --stacktrace
+        run: |
+          set -o pipefail
+          ./gradlew :domain:test :app:testDebugUnitTest 2>&1 | tee build.log
+
+      - name: Print compile errors
+        if: failure()
+        run: grep -E "^e: |^w: .*(error)|What went wrong|> Task .*FAILED" build.log | head -80 || true
 
       - name: Print test failures
         if: failure()
