@@ -45,7 +45,8 @@ jobs:
 
       - name: Print compile errors
         if: failure()
-        run: grep -E "^e: |^w: .*(error)|What went wrong|> Task .*FAILED" build.log | head -80 || true
+        run: |
+          grep -E "^e: |What went wrong|> Task .*FAILED" build.log | head -80 || true
 
       - name: Print test failures
         if: failure()
