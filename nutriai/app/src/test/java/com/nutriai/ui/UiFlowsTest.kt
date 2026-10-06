@@ -6,6 +6,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.test.assertIsEnabled
 import androidx.compose.ui.test.assertIsNotEnabled
+import androidx.compose.ui.test.hasScrollAction
+import androidx.compose.ui.test.hasText
+import androidx.compose.ui.test.performScrollToNode
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
@@ -103,9 +106,10 @@ class UiFlowsTest {
         }
         compose.onNodeWithText("≈ 1.250 kcal", substring = true).assertExists()
         compose.onAllNodesWithText("2.000 kcal", substring = true).onFirst().assertExists()
-        compose.onNodeWithText("Agua").assertExists()
         compose.onNodeWithTag("analyze").performClick()
         assertTrue(analyzed)
+        compose.onAllNodes(hasScrollAction()).onFirst().performScrollToNode(hasText("Agua"))
+        compose.onNodeWithText("Agua").assertExists()
     }
 
     @Test
