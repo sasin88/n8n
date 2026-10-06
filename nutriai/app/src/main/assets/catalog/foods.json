@@ -1,5 +1,5 @@
 {
- "version": 1,
+ "version": 2,
  "source": "USDA FoodData Central, SR Legacy (dominio público). Recetas: composición aproximada calculada por NutriAI.",
  "foods": [
   {
@@ -2092,6 +2092,12 @@
      "foodId": "sweet_pepper",
      "grams": 10
     }
+   ],
+   "tags": [
+    "COSTA_RICA",
+    "VEGAN",
+    "VEGETARIAN",
+    "BREAKFAST"
    ]
   },
   {
@@ -2130,6 +2136,10 @@
      "foodId": "plantain_ripe_fried",
      "grams": 80
     }
+   ],
+   "tags": [
+    "COSTA_RICA",
+    "HIGH_PROTEIN"
    ]
   },
   {
@@ -2164,6 +2174,10 @@
      "foodId": "avocado",
      "grams": 30
     }
+   ],
+   "tags": [
+    "COSTA_RICA",
+    "HIGH_PROTEIN"
    ]
   },
   {
@@ -2198,6 +2212,9 @@
      "foodId": "oil_vegetable",
      "grams": 5
     }
+   ],
+   "tags": [
+    "COSTA_RICA"
    ]
   },
   {
@@ -2229,6 +2246,9 @@
      "foodId": "oil_vegetable",
      "grams": 5
     }
+   ],
+   "tags": [
+    "COSTA_RICA"
    ]
   },
   {
@@ -2268,6 +2288,10 @@
      "foodId": "plantain_cooked",
      "grams": 60
     }
+   ],
+   "tags": [
+    "COSTA_RICA",
+    "HIGH_PROTEIN"
    ]
   },
   {
@@ -2299,6 +2323,560 @@
      "foodId": "sweet_pepper",
      "grams": 10
     }
+   ],
+   "tags": [
+    "COSTA_RICA"
+   ]
+  },
+  {
+   "id": "r_avena_banano",
+   "name": "Avena con banano y miel",
+   "countryCode": null,
+   "aliases": [
+    "avena",
+    "oatmeal"
+   ],
+   "components": [
+    {
+     "foodId": "oats_dry",
+     "grams": 40
+    },
+    {
+     "foodId": "milk_2pct",
+     "grams": 200
+    },
+    {
+     "foodId": "banana",
+     "grams": 100
+    },
+    {
+     "foodId": "honey",
+     "grams": 10
+    }
+   ],
+   "tags": [
+    "BREAKFAST",
+    "VEGETARIAN",
+    "QUICK"
+   ]
+  },
+  {
+   "id": "r_huevos_tortilla_aguacate",
+   "name": "Huevos revueltos con tortilla y aguacate",
+   "countryCode": null,
+   "aliases": [
+    "desayuno",
+    "huevos"
+   ],
+   "components": [
+    {
+     "foodId": "egg_scrambled",
+     "grams": 100
+    },
+    {
+     "foodId": "tortilla_corn",
+     "grams": 50
+    },
+    {
+     "foodId": "avocado",
+     "grams": 50
+    }
+   ],
+   "tags": [
+    "BREAKFAST",
+    "VEGETARIAN",
+    "QUICK"
+   ]
+  },
+  {
+   "id": "r_yogur_fresas_almendras",
+   "name": "Bowl de yogur, fresas y almendras",
+   "countryCode": null,
+   "aliases": [
+    "bowl de yogur",
+    "yogurt bowl"
+   ],
+   "components": [
+    {
+     "foodId": "yogurt_plain_whole",
+     "grams": 200
+    },
+    {
+     "foodId": "strawberries",
+     "grams": 100
+    },
+    {
+     "foodId": "almonds",
+     "grams": 15
+    },
+    {
+     "foodId": "honey",
+     "grams": 5
+    }
+   ],
+   "tags": [
+    "BREAKFAST",
+    "VEGETARIAN",
+    "SNACK",
+    "QUICK"
+   ]
+  },
+  {
+   "id": "r_bowl_pollo_arroz_brocoli",
+   "name": "Bowl de pollo, arroz integral y brócoli",
+   "countryCode": null,
+   "aliases": [
+    "bowl de pollo",
+    "chicken bowl"
+   ],
+   "components": [
+    {
+     "foodId": "chicken_breast_roasted",
+     "grams": 150
+    },
+    {
+     "foodId": "rice_brown_cooked",
+     "grams": 150
+    },
+    {
+     "foodId": "broccoli_cooked",
+     "grams": 100
+    },
+    {
+     "foodId": "oil_olive",
+     "grams": 5
+    }
+   ],
+   "tags": [
+    "HIGH_PROTEIN"
+   ]
+  },
+  {
+   "id": "r_ensalada_atun",
+   "name": "Ensalada de atún",
+   "countryCode": null,
+   "aliases": [
+    "ensalada de atun",
+    "tuna salad"
+   ],
+   "components": [
+    {
+     "foodId": "fish_tuna_canned_water",
+     "grams": 100
+    },
+    {
+     "foodId": "lettuce",
+     "grams": 80
+    },
+    {
+     "foodId": "tomato",
+     "grams": 80
+    },
+    {
+     "foodId": "cucumber",
+     "grams": 60
+    },
+    {
+     "foodId": "oil_olive",
+     "grams": 10
+    }
+   ],
+   "tags": [
+    "HIGH_PROTEIN",
+    "LOW_CARB",
+    "QUICK"
+   ]
+  },
+  {
+   "id": "r_salmon_papa_brocoli",
+   "name": "Salmón con papa y brócoli",
+   "countryCode": null,
+   "aliases": [
+    "salmon"
+   ],
+   "components": [
+    {
+     "foodId": "fish_salmon_cooked",
+     "grams": 150
+    },
+    {
+     "foodId": "potato_boiled",
+     "grams": 150
+    },
+    {
+     "foodId": "broccoli_cooked",
+     "grams": 100
+    }
+   ],
+   "tags": [
+    "HIGH_PROTEIN"
+   ]
+  },
+  {
+   "id": "r_tilapia_ensalada",
+   "name": "Tilapia con ensalada",
+   "countryCode": null,
+   "aliases": [
+    "pescado con ensalada"
+   ],
+   "components": [
+    {
+     "foodId": "fish_tilapia_cooked",
+     "grams": 150
+    },
+    {
+     "foodId": "lettuce",
+     "grams": 60
+    },
+    {
+     "foodId": "tomato",
+     "grams": 60
+    },
+    {
+     "foodId": "oil_olive",
+     "grams": 5
+    }
+   ],
+   "tags": [
+    "HIGH_PROTEIN",
+    "LOW_CARB",
+    "LOW_FAT"
+   ]
+  },
+  {
+   "id": "r_lentejas_guisadas",
+   "name": "Lentejas guisadas",
+   "countryCode": null,
+   "aliases": [
+    "lentejas"
+   ],
+   "components": [
+    {
+     "foodId": "lentils_cooked",
+     "grams": 200
+    },
+    {
+     "foodId": "onion",
+     "grams": 30
+    },
+    {
+     "foodId": "carrot",
+     "grams": 40
+    },
+    {
+     "foodId": "tomato",
+     "grams": 50
+    },
+    {
+     "foodId": "oil_vegetable",
+     "grams": 5
+    }
+   ],
+   "tags": [
+    "VEGAN",
+    "VEGETARIAN",
+    "LOW_FAT"
+   ]
+  },
+  {
+   "id": "r_garbanzos_vegetales",
+   "name": "Garbanzos salteados con vegetales",
+   "countryCode": null,
+   "aliases": [
+    "garbanzos"
+   ],
+   "components": [
+    {
+     "foodId": "chickpeas_cooked",
+     "grams": 180
+    },
+    {
+     "foodId": "sweet_pepper",
+     "grams": 50
+    },
+    {
+     "foodId": "onion",
+     "grams": 30
+    },
+    {
+     "foodId": "tomato",
+     "grams": 60
+    },
+    {
+     "foodId": "oil_olive",
+     "grams": 10
+    }
+   ],
+   "tags": [
+    "VEGAN",
+    "VEGETARIAN"
+   ]
+  },
+  {
+   "id": "r_pasta_pollo",
+   "name": "Pasta con pollo y tomate",
+   "countryCode": null,
+   "aliases": [
+    "pasta con pollo"
+   ],
+   "components": [
+    {
+     "foodId": "pasta_cooked",
+     "grams": 180
+    },
+    {
+     "foodId": "chicken_breast_roasted",
+     "grams": 100
+    },
+    {
+     "foodId": "tomato",
+     "grams": 80
+    },
+    {
+     "foodId": "oil_olive",
+     "grams": 10
+    }
+   ],
+   "tags": [
+    "HIGH_PROTEIN"
+   ]
+  },
+  {
+   "id": "r_tostadas_mani_banano",
+   "name": "Tostadas con mantequilla de maní y banano",
+   "countryCode": null,
+   "aliases": [
+    "tostadas"
+   ],
+   "components": [
+    {
+     "foodId": "bread_whole_wheat",
+     "grams": 60
+    },
+    {
+     "foodId": "peanut_butter",
+     "grams": 30
+    },
+    {
+     "foodId": "banana",
+     "grams": 100
+    }
+   ],
+   "tags": [
+    "BREAKFAST",
+    "VEGETARIAN",
+    "QUICK"
+   ]
+  },
+  {
+   "id": "r_batido_banano",
+   "name": "Batido de banano y avena",
+   "countryCode": null,
+   "aliases": [
+    "batido",
+    "smoothie"
+   ],
+   "components": [
+    {
+     "foodId": "milk_2pct",
+     "grams": 250
+    },
+    {
+     "foodId": "banana",
+     "grams": 120
+    },
+    {
+     "foodId": "oats_dry",
+     "grams": 20
+    }
+   ],
+   "tags": [
+    "BREAKFAST",
+    "VEGETARIAN",
+    "QUICK"
+   ]
+  },
+  {
+   "id": "r_ensalada_huevo_aguacate",
+   "name": "Ensalada de huevo y aguacate",
+   "countryCode": null,
+   "aliases": [
+    "ensalada de huevo"
+   ],
+   "components": [
+    {
+     "foodId": "egg_boiled",
+     "grams": 100
+    },
+    {
+     "foodId": "avocado",
+     "grams": 70
+    },
+    {
+     "foodId": "lettuce",
+     "grams": 60
+    },
+    {
+     "foodId": "tomato",
+     "grams": 60
+    }
+   ],
+   "tags": [
+    "LOW_CARB",
+    "VEGETARIAN",
+    "QUICK"
+   ]
+  },
+  {
+   "id": "r_burrito_frijoles",
+   "name": "Burrito de frijoles y queso",
+   "countryCode": null,
+   "aliases": [
+    "burrito"
+   ],
+   "components": [
+    {
+     "foodId": "tortilla_flour",
+     "grams": 70
+    },
+    {
+     "foodId": "beans_black_cooked",
+     "grams": 120
+    },
+    {
+     "foodId": "cheese_queso_fresco",
+     "grams": 30
+    },
+    {
+     "foodId": "rice_white_cooked",
+     "grams": 80
+    }
+   ],
+   "tags": [
+    "VEGETARIAN"
+   ]
+  },
+  {
+   "id": "r_camarones_arroz",
+   "name": "Camarones al ajillo con arroz",
+   "countryCode": null,
+   "aliases": [
+    "camarones"
+   ],
+   "components": [
+    {
+     "foodId": "shrimp_cooked",
+     "grams": 150
+    },
+    {
+     "foodId": "rice_white_cooked",
+     "grams": 150
+    },
+    {
+     "foodId": "oil_olive",
+     "grams": 10
+    }
+   ],
+   "tags": [
+    "HIGH_PROTEIN"
+   ]
+  },
+  {
+   "id": "r_bistec_ensalada",
+   "name": "Bistec con ensalada",
+   "countryCode": null,
+   "aliases": [
+    "bistec"
+   ],
+   "components": [
+    {
+     "foodId": "beef_steak_cooked",
+     "grams": 150
+    },
+    {
+     "foodId": "lettuce",
+     "grams": 60
+    },
+    {
+     "foodId": "tomato",
+     "grams": 60
+    },
+    {
+     "foodId": "cucumber",
+     "grams": 50
+    },
+    {
+     "foodId": "oil_olive",
+     "grams": 5
+    }
+   ],
+   "tags": [
+    "HIGH_PROTEIN",
+    "LOW_CARB"
+   ]
+  },
+  {
+   "id": "r_frutas_tropicales",
+   "name": "Plato de frutas tropicales",
+   "countryCode": null,
+   "aliases": [
+    "frutas",
+    "fruit"
+   ],
+   "components": [
+    {
+     "foodId": "papaya",
+     "grams": 100
+    },
+    {
+     "foodId": "pineapple",
+     "grams": 100
+    },
+    {
+     "foodId": "mango",
+     "grams": 100
+    }
+   ],
+   "tags": [
+    "VEGAN",
+    "VEGETARIAN",
+    "SNACK",
+    "LOW_FAT",
+    "QUICK"
+   ]
+  },
+  {
+   "id": "r_sandwich_jamon_queso",
+   "name": "Sándwich de jamón y queso",
+   "countryCode": null,
+   "aliases": [
+    "sandwich",
+    "sándwich"
+   ],
+   "components": [
+    {
+     "foodId": "bread_white",
+     "grams": 60
+    },
+    {
+     "foodId": "ham_sliced",
+     "grams": 40
+    },
+    {
+     "foodId": "cheese_cheddar",
+     "grams": 20
+    },
+    {
+     "foodId": "lettuce",
+     "grams": 15
+    },
+    {
+     "foodId": "tomato",
+     "grams": 20
+    }
+   ],
+   "tags": [
+    "QUICK"
    ]
   }
  ]
