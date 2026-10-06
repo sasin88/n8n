@@ -26,6 +26,9 @@ data class FoodReference(
     val category: FoodCategory = FoodCategory.OTHER,
     val countryCode: String? = null,
     val components: List<RecipeComponent> = emptyList(),
+    val tags: Set<FoodTag> = emptySet(),
+    /** true si lo creó el usuario (alimento o receta propia). */
+    val isUserCreated: Boolean = false,
 ) {
     val isRecipe: Boolean get() = components.isNotEmpty()
 }
@@ -37,5 +40,8 @@ data class RecipeComponent(
 )
 
 enum class FoodCategory { GRAINS, LEGUMES, MEAT, FISH, DAIRY, EGGS, FRUIT, VEGETABLES, FATS, DRINKS, SWEETS, DISHES, OTHER }
+
+/** Etiquetas para explorar recetas por estilo de alimentación. */
+enum class FoodTag { HIGH_PROTEIN, LOW_CARB, LOW_FAT, VEGETARIAN, VEGAN, BREAKFAST, SNACK, COSTA_RICA, QUICK }
 
 enum class MealType { BREAKFAST, LUNCH, DINNER, SNACK }

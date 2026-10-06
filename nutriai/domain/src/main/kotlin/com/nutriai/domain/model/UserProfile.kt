@@ -16,7 +16,17 @@ data class UserProfile(
     val unitSystem: UnitSystem = UnitSystem.METRIC,
     val countryCode: String? = null,
     val languageTag: String? = null,
+    /** Objetivos adicionales elegidos en la bienvenida (no afectan al cálculo). */
+    val secondaryGoals: Set<SecondaryGoal> = emptySet(),
+    /** Ritmo de cambio de peso deseado en kg/semana; null = ritmo recomendado. */
+    val weeklyRateKg: Double? = null,
+    /** Meta diaria de agua en ml; null = meta orientativa calculada. */
+    val waterGoalMl: Int? = null,
+    /** Si las calorías del ejercicio registrado se suman al presupuesto del día. */
+    val exerciseAddsToBudget: Boolean = false,
 )
+
+enum class SecondaryGoal { GET_FIT, AVOID_ADDITIVES, MANAGE_CONDITIONS, SKIN_AND_AGING, IMMUNE_SYSTEM, MORE_ENERGY, BETTER_SLEEP }
 
 enum class Sex { MALE, FEMALE }
 

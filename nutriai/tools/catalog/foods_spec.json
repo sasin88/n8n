@@ -1373,6 +1373,12 @@
      "sweet_pepper",
      10
     ]
+   ],
+   "tags": [
+    "COSTA_RICA",
+    "VEGAN",
+    "VEGETARIAN",
+    "BREAKFAST"
    ]
   },
   {
@@ -1411,6 +1417,10 @@
      "plantain_ripe_fried",
      80
     ]
+   ],
+   "tags": [
+    "COSTA_RICA",
+    "HIGH_PROTEIN"
    ]
   },
   {
@@ -1445,6 +1455,10 @@
      "avocado",
      30
     ]
+   ],
+   "tags": [
+    "COSTA_RICA",
+    "HIGH_PROTEIN"
    ]
   },
   {
@@ -1479,6 +1493,9 @@
      "oil_vegetable",
      5
     ]
+   ],
+   "tags": [
+    "COSTA_RICA"
    ]
   },
   {
@@ -1510,6 +1527,9 @@
      "oil_vegetable",
      5
     ]
+   ],
+   "tags": [
+    "COSTA_RICA"
    ]
   },
   {
@@ -1549,6 +1569,10 @@
      "plantain_cooked",
      60
     ]
+   ],
+   "tags": [
+    "COSTA_RICA",
+    "HIGH_PROTEIN"
    ]
   },
   {
@@ -1580,6 +1604,542 @@
      "sweet_pepper",
      10
     ]
+   ],
+   "tags": [
+    "COSTA_RICA"
+   ]
+  },
+  {
+   "id": "r_avena_banano",
+   "es": "Avena con banano y miel",
+   "aliases": [
+    "avena",
+    "oatmeal"
+   ],
+   "components": [
+    [
+     "oats_dry",
+     40
+    ],
+    [
+     "milk_2pct",
+     200
+    ],
+    [
+     "banana",
+     100
+    ],
+    [
+     "honey",
+     10
+    ]
+   ],
+   "tags": [
+    "BREAKFAST",
+    "VEGETARIAN",
+    "QUICK"
+   ]
+  },
+  {
+   "id": "r_huevos_tortilla_aguacate",
+   "es": "Huevos revueltos con tortilla y aguacate",
+   "aliases": [
+    "desayuno",
+    "huevos"
+   ],
+   "components": [
+    [
+     "egg_scrambled",
+     100
+    ],
+    [
+     "tortilla_corn",
+     50
+    ],
+    [
+     "avocado",
+     50
+    ]
+   ],
+   "tags": [
+    "BREAKFAST",
+    "VEGETARIAN",
+    "QUICK"
+   ]
+  },
+  {
+   "id": "r_yogur_fresas_almendras",
+   "es": "Bowl de yogur, fresas y almendras",
+   "aliases": [
+    "bowl de yogur",
+    "yogurt bowl"
+   ],
+   "components": [
+    [
+     "yogurt_plain_whole",
+     200
+    ],
+    [
+     "strawberries",
+     100
+    ],
+    [
+     "almonds",
+     15
+    ],
+    [
+     "honey",
+     5
+    ]
+   ],
+   "tags": [
+    "BREAKFAST",
+    "VEGETARIAN",
+    "SNACK",
+    "QUICK"
+   ]
+  },
+  {
+   "id": "r_bowl_pollo_arroz_brocoli",
+   "es": "Bowl de pollo, arroz integral y brócoli",
+   "aliases": [
+    "bowl de pollo",
+    "chicken bowl"
+   ],
+   "components": [
+    [
+     "chicken_breast_roasted",
+     150
+    ],
+    [
+     "rice_brown_cooked",
+     150
+    ],
+    [
+     "broccoli_cooked",
+     100
+    ],
+    [
+     "oil_olive",
+     5
+    ]
+   ],
+   "tags": [
+    "HIGH_PROTEIN"
+   ]
+  },
+  {
+   "id": "r_ensalada_atun",
+   "es": "Ensalada de atún",
+   "aliases": [
+    "ensalada de atun",
+    "tuna salad"
+   ],
+   "components": [
+    [
+     "fish_tuna_canned_water",
+     100
+    ],
+    [
+     "lettuce",
+     80
+    ],
+    [
+     "tomato",
+     80
+    ],
+    [
+     "cucumber",
+     60
+    ],
+    [
+     "oil_olive",
+     10
+    ]
+   ],
+   "tags": [
+    "HIGH_PROTEIN",
+    "LOW_CARB",
+    "QUICK"
+   ]
+  },
+  {
+   "id": "r_salmon_papa_brocoli",
+   "es": "Salmón con papa y brócoli",
+   "aliases": [
+    "salmon"
+   ],
+   "components": [
+    [
+     "fish_salmon_cooked",
+     150
+    ],
+    [
+     "potato_boiled",
+     150
+    ],
+    [
+     "broccoli_cooked",
+     100
+    ]
+   ],
+   "tags": [
+    "HIGH_PROTEIN"
+   ]
+  },
+  {
+   "id": "r_tilapia_ensalada",
+   "es": "Tilapia con ensalada",
+   "aliases": [
+    "pescado con ensalada"
+   ],
+   "components": [
+    [
+     "fish_tilapia_cooked",
+     150
+    ],
+    [
+     "lettuce",
+     60
+    ],
+    [
+     "tomato",
+     60
+    ],
+    [
+     "oil_olive",
+     5
+    ]
+   ],
+   "tags": [
+    "HIGH_PROTEIN",
+    "LOW_CARB",
+    "LOW_FAT"
+   ]
+  },
+  {
+   "id": "r_lentejas_guisadas",
+   "es": "Lentejas guisadas",
+   "aliases": [
+    "lentejas"
+   ],
+   "components": [
+    [
+     "lentils_cooked",
+     200
+    ],
+    [
+     "onion",
+     30
+    ],
+    [
+     "carrot",
+     40
+    ],
+    [
+     "tomato",
+     50
+    ],
+    [
+     "oil_vegetable",
+     5
+    ]
+   ],
+   "tags": [
+    "VEGAN",
+    "VEGETARIAN",
+    "LOW_FAT"
+   ]
+  },
+  {
+   "id": "r_garbanzos_vegetales",
+   "es": "Garbanzos salteados con vegetales",
+   "aliases": [
+    "garbanzos"
+   ],
+   "components": [
+    [
+     "chickpeas_cooked",
+     180
+    ],
+    [
+     "sweet_pepper",
+     50
+    ],
+    [
+     "onion",
+     30
+    ],
+    [
+     "tomato",
+     60
+    ],
+    [
+     "oil_olive",
+     10
+    ]
+   ],
+   "tags": [
+    "VEGAN",
+    "VEGETARIAN"
+   ]
+  },
+  {
+   "id": "r_pasta_pollo",
+   "es": "Pasta con pollo y tomate",
+   "aliases": [
+    "pasta con pollo"
+   ],
+   "components": [
+    [
+     "pasta_cooked",
+     180
+    ],
+    [
+     "chicken_breast_roasted",
+     100
+    ],
+    [
+     "tomato",
+     80
+    ],
+    [
+     "oil_olive",
+     10
+    ]
+   ],
+   "tags": [
+    "HIGH_PROTEIN"
+   ]
+  },
+  {
+   "id": "r_tostadas_mani_banano",
+   "es": "Tostadas con mantequilla de maní y banano",
+   "aliases": [
+    "tostadas"
+   ],
+   "components": [
+    [
+     "bread_whole_wheat",
+     60
+    ],
+    [
+     "peanut_butter",
+     30
+    ],
+    [
+     "banana",
+     100
+    ]
+   ],
+   "tags": [
+    "BREAKFAST",
+    "VEGETARIAN",
+    "QUICK"
+   ]
+  },
+  {
+   "id": "r_batido_banano",
+   "es": "Batido de banano y avena",
+   "aliases": [
+    "batido",
+    "smoothie"
+   ],
+   "components": [
+    [
+     "milk_2pct",
+     250
+    ],
+    [
+     "banana",
+     120
+    ],
+    [
+     "oats_dry",
+     20
+    ]
+   ],
+   "tags": [
+    "BREAKFAST",
+    "VEGETARIAN",
+    "QUICK"
+   ]
+  },
+  {
+   "id": "r_ensalada_huevo_aguacate",
+   "es": "Ensalada de huevo y aguacate",
+   "aliases": [
+    "ensalada de huevo"
+   ],
+   "components": [
+    [
+     "egg_boiled",
+     100
+    ],
+    [
+     "avocado",
+     70
+    ],
+    [
+     "lettuce",
+     60
+    ],
+    [
+     "tomato",
+     60
+    ]
+   ],
+   "tags": [
+    "LOW_CARB",
+    "VEGETARIAN",
+    "QUICK"
+   ]
+  },
+  {
+   "id": "r_burrito_frijoles",
+   "es": "Burrito de frijoles y queso",
+   "aliases": [
+    "burrito"
+   ],
+   "components": [
+    [
+     "tortilla_flour",
+     70
+    ],
+    [
+     "beans_black_cooked",
+     120
+    ],
+    [
+     "cheese_queso_fresco",
+     30
+    ],
+    [
+     "rice_white_cooked",
+     80
+    ]
+   ],
+   "tags": [
+    "VEGETARIAN"
+   ]
+  },
+  {
+   "id": "r_camarones_arroz",
+   "es": "Camarones al ajillo con arroz",
+   "aliases": [
+    "camarones"
+   ],
+   "components": [
+    [
+     "shrimp_cooked",
+     150
+    ],
+    [
+     "rice_white_cooked",
+     150
+    ],
+    [
+     "oil_olive",
+     10
+    ]
+   ],
+   "tags": [
+    "HIGH_PROTEIN"
+   ]
+  },
+  {
+   "id": "r_bistec_ensalada",
+   "es": "Bistec con ensalada",
+   "aliases": [
+    "bistec"
+   ],
+   "components": [
+    [
+     "beef_steak_cooked",
+     150
+    ],
+    [
+     "lettuce",
+     60
+    ],
+    [
+     "tomato",
+     60
+    ],
+    [
+     "cucumber",
+     50
+    ],
+    [
+     "oil_olive",
+     5
+    ]
+   ],
+   "tags": [
+    "HIGH_PROTEIN",
+    "LOW_CARB"
+   ]
+  },
+  {
+   "id": "r_frutas_tropicales",
+   "es": "Plato de frutas tropicales",
+   "aliases": [
+    "frutas",
+    "fruit"
+   ],
+   "components": [
+    [
+     "papaya",
+     100
+    ],
+    [
+     "pineapple",
+     100
+    ],
+    [
+     "mango",
+     100
+    ]
+   ],
+   "tags": [
+    "VEGAN",
+    "VEGETARIAN",
+    "SNACK",
+    "LOW_FAT",
+    "QUICK"
+   ]
+  },
+  {
+   "id": "r_sandwich_jamon_queso",
+   "es": "Sándwich de jamón y queso",
+   "aliases": [
+    "sandwich",
+    "sándwich"
+   ],
+   "components": [
+    [
+     "bread_white",
+     60
+    ],
+    [
+     "ham_sliced",
+     40
+    ],
+    [
+     "cheese_cheddar",
+     20
+    ],
+    [
+     "lettuce",
+     15
+    ],
+    [
+     "tomato",
+     20
+    ]
+   ],
+   "tags": [
+    "QUICK"
    ]
   }
  ]

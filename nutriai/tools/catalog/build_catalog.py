@@ -167,11 +167,12 @@ def main():
             "countryCode": r.get("country"),
             "aliases": r.get("aliases", []),
             "components": [{"foodId": c, "grams": g} for c, g in comps],
+            "tags": r.get("tags", []),
         })
 
     json.dump(
         {
-            "version": 1,
+            "version": 2,
             "source": "USDA FoodData Central, SR Legacy (dominio público). Recetas: composición aproximada calculada por NutriAI.",
             "foods": out_foods,
             "recipes": out_recipes,

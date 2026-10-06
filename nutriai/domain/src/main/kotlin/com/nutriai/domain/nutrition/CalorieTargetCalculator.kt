@@ -1,5 +1,6 @@
 package com.nutriai.domain.nutrition
 
+import com.nutriai.domain.health.WeightGoalPlanner
 import com.nutriai.domain.model.Goal
 import com.nutriai.domain.model.Sex
 import com.nutriai.domain.model.UserProfile
@@ -32,7 +33,10 @@ class CalorieTargetCalculator(private val formula: EnergyFormula = EnergyFormula
             BodyMetrics(profile.sex, profile.ageYears, profile.weightKg, profile.heightCm),
         )
         val tdee = bmr * profile.activityLevel.multiplier
-        val raw = (tdee + goalAdjustmentKcal(profile.goal)).roundToInt()
+        val adjustment = profile.weeklyRateKg
+            ?.let { WeightGoalPlanner.dailyAdjustmentKcal(profile.goal, it) }
+            ?: goalAdjustmentKcal(profile.goal)
+        val raw = (tdee + adjustment).roundToInt()
         val minimum = minimumKcal(profile.sex)
         val suggested = maxOf(raw, minimum)
         val manual = profile.manualCalorieTarget

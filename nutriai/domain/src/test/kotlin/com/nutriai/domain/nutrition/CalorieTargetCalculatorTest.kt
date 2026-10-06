@@ -62,3 +62,12 @@ class CalorieTargetCalculatorTest {
         assertEquals(1801.252, target.bmrKcal, 0.001)
     }
 }
+
+class CalorieTargetWithRateTest {
+    @org.junit.Test
+    fun `weekly rate drives the deficit`() {
+        val p = com.nutriai.domain.TestData.adrian.copy(weeklyRateKg = 0.25)
+        val t = CalorieTargetCalculator().calculate(p)
+        org.junit.Assert.assertEquals(Math.round(1723.75 * 1.55 - 275).toInt(), t.suggestedKcal)
+    }
+}
