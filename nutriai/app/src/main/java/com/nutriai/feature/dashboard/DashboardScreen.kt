@@ -282,3 +282,23 @@ private fun WaterCard(ml: Int, goalMl: Int, onAdd: () -> Unit, onRemove: () -> U
         }
     }
 }
+
+@Composable
+private fun MealTypeCard(type: MealType, nutrients: Nutrients?, itemsSummary: String, onAdd: () -> Unit, onOpen: () -> Unit) {
+    NutriCard(onClick = if (nutrients != null) onOpen else onAdd, contentPadding = PaddingValues(start = 20.dp, end = 8.dp, top = 14.dp, bottom = 14.dp)) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text(Labels.mealEmoji(type), style = MaterialTheme.typography.titleLarge)
+            Spacer(Modifier.width(14.dp))
+            Column(Modifier.weight(1f)) {
+                Text(Labels.mealType(type), style = MaterialTheme.typography.titleMedium)
+                Text(
+                    if (nutrients == null) "Sin registrar" else "${Labels.approxKcal(nutrients.energyKcal)} · $itemsSummary",
+                    style = MaterialTheme.typography.bodyMedium,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 1,
+                )
+            }
+            IconButton(onClick = onAdd) { Icon(Icons.Rounded.Add, "Añadir a ${Labels.mealType(type)}") }
+        }
+    }
+}
