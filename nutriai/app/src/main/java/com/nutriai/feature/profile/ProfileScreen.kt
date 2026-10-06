@@ -8,6 +8,8 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
+import androidx.compose.material.icons.automirrored.rounded.ArrowBack
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material3.AlertDialog
@@ -61,9 +63,12 @@ class ProfileViewModel @Inject constructor(
 
 @Composable
 fun ProfileScreen(
+    onBack: () -> Unit,
     onEdit: (Long) -> Unit,
     onSwitch: () -> Unit,
-    onSettings: () -> Unit,
+    onGoal: () -> Unit,
+    onPreferences: () -> Unit,
+    onNotifications: () -> Unit,
     onPrivacy: () -> Unit,
     viewModel: ProfileViewModel = hiltViewModel(),
 ) {
@@ -75,27 +80,27 @@ fun ProfileScreen(
 
     LazyColumn(
         Modifier.fillMaxSize(),
-        contentPadding = PaddingValues(horizontal = 20.dp, vertical = 16.dp),
-        verticalArrangement = Arrangement.spacedBy(16.dp),
+        contentPadding = PaddingValues(start = 20.dp, end = 20.dp, top = 12.dp, bottom = 40.dp),
+        verticalArrangement = Arrangement.spacedBy(20.dp),
     ) {
-        item { Text(p.name, style = MaterialTheme.typography.headlineMedium) }
         item {
-            AppearIn(0) {
-                NutriCard {
-                    ValueRow("Sexo", Labels.sex(p.sex))
-                    ValueRow("Edad", "${p.ageYears} años")
-                    ValueRow("Peso", Labels.weight(p.weightKg))
-                    ValueRow("Altura", "${Labels.formatNumber(p.heightCm)} cm")
-                    ValueRow("Actividad", Labels.activityShort(p.activityLevel))
-                    ValueRow("Objetivo", Labels.goal(p.goal))
-                    p.targetWeightKg?.let { ValueRow("Peso objetivo", Labels.weight(it)) }
-                    Spacer(Modifier.height(8.dp))
-                    SecondaryButton("Editar perfil", { onEdit(p.id) })
+            com.nutriai.core.ui.components.GlassIconButton(onClick = onBack, contentDescription = "Volver") {
+                androidx.compose.material3.Icon(androidx.compose.material.icons.Icons.AutoMirrored.Rounded.ArrowBack, null)
+            }
+            Spacer(Modifier.height(12.dp))
+            androidx.compose.foundation.layout.Row(verticalAlignment = androidx.compose.ui.Alignment.CenterVertically) {
+                com.nutriai.core.ui.components.GlassIconButton(onClick = { onEdit(p.id) }, contentDescription = "Editar perfil", size = 72.dp) {
+                    Text(p.name.take(1).uppercase(), style = MaterialTheme.typography.headlineMedium, color = MaterialTheme.colorScheme.primary)
+                }
+                Spacer(Modifier.width(16.dp))
+                Column {
+                    Text(p.name, style = MaterialTheme.typography.headlineMedium)
+                    Text("${Labels.sex(p.sex)} · ${p.ageYears} años · ${Labels.goal(p.goal)}", style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 }
             }
         }
         item {
-            AppearIn(1) {
+            AppearIn(0) {
                 NutriCard {
                     Text("Tu objetivo diario", style = MaterialTheme.typography.titleMedium)
                     ValueRow("Metabolismo basal (BMR)", Labels.approxKcal(t.bmrKcal))
@@ -109,10 +114,7 @@ fun ProfileScreen(
                     )
                     TextButton(onClick = { editingTarget = true }) { Text("Ajustar objetivo manualmente") }
                     if (t.minimumApplied) {
-                        NoticeCard(
-                            "El cálculo daba un objetivo muy bajo, así que usamos un mínimo orientativo. Consulta con un profesional para un plan personalizado.",
-                            isWarning = true,
-                        )
+                        NoticeCard("El cálculo daba un objetivo muy bajo, así que usamos un mínimo orientativo. Consulta con un profesional para un plan personalizado.", isWarning = true)
                     }
                     if (t.manualBelowMinimum) {
                         NoticeCard(
@@ -120,7 +122,6 @@ fun ProfileScreen(
                             isWarning = true,
                         )
                     }
-                    Spacer(Modifier.height(8.dp))
                     Text(
                         "Cálculo estimado con fórmulas reconocidas. No es un consejo médico. Si tienes una condición de salud, estás embarazada o en lactancia, consulta con un profesional.",
                         style = MaterialTheme.typography.labelMedium,
@@ -130,10 +131,17 @@ fun ProfileScreen(
             }
         }
         item {
-            Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
-                SecondaryButton("Cambiar de perfil", onSwitch)
-                SecondaryButton("Configuración", onSettings)
-                SecondaryButton("Privacidad y datos", onPrivacy)
+            com.nutriai.feature.settings.GlassGroup("Perfil") {
+                com.nutriai.feature.settings.GroupRow("Detalles del perfil", emoji = "👤", onClick = { onEdit(p.id) })
+                com.nutriai.feature.settings.GroupRow("Mi meta", emoji = "🎯", value = p.targetWeightKg?.let { Labels.weight(it) }, onClick = onGoal)
+                com.nutriai.feature.settings.GroupRow("Cambiar de perfil", emoji = "👥", showDivider = false, onClick = onSwitch)
+            }
+        }
+        item {
+            com.nutriai.feature.settings.GlassGroup("App") {
+                com.nutriai.feature.settings.GroupRow("Preferencias", emoji = "⚙️", onClick = onPreferences)
+                com.nutriai.feature.settings.GroupRow("Notificaciones", emoji = "🔔", onClick = onNotifications)
+                com.nutriai.feature.settings.GroupRow("Privacidad y datos", emoji = "🔒", showDivider = false, onClick = onPrivacy)
             }
         }
     }

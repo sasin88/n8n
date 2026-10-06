@@ -15,6 +15,7 @@ class DataEraser @Inject constructor(
     private val database: NutriAiDatabase,
     private val settings: SettingsRepository,
     private val images: ImageProcessor,
+    private val reminders: com.nutriai.data.reminders.ReminderScheduler,
     @IoDispatcher private val io: CoroutineDispatcher,
 ) {
     suspend fun eraseEverything() = withContext(io) {
@@ -23,5 +24,7 @@ class DataEraser @Inject constructor(
         settings.clearPersonal()
         settings.setCatalogVersion(0)
         images.clearTemporaryPhotos()
+        reminders.apply(com.nutriai.data.settings.ReminderSettings())
+        reminders.cancelFasting()
     }
 }

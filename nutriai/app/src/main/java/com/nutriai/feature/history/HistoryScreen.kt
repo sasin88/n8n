@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowLeft
 import androidx.compose.material.icons.automirrored.filled.KeyboardArrowRight
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -49,6 +50,7 @@ fun HistoryScreen(
     onOpenDay: (LocalDate) -> Unit,
     onOpenMeal: (Long) -> Unit,
     onOpenStats: () -> Unit,
+    onBack: () -> Unit = {},
     viewModel: HistoryViewModel = hiltViewModel(),
 ) {
     val state by viewModel.state.collectAsStateWithLifecycle()
@@ -58,30 +60,20 @@ fun HistoryScreen(
         verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
         item {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Text("Historial", style = MaterialTheme.typography.headlineMedium, modifier = Modifier.weight(1f))
+            com.nutriai.core.ui.components.GlassIconButton(onClick = onBack, contentDescription = "Volver") {
+                Icon(androidx.compose.material.icons.Icons.AutoMirrored.Filled.ArrowBack, null)
+            }
+            com.nutriai.core.ui.components.LargeTitle("Historial") {
                 TextButton(onClick = onOpenStats) { Text("Estadísticas") }
             }
         }
         item {
             val periods = HistoryPeriod.entries
-            SingleChoiceSegmentedButtonRow(Modifier.fillMaxWidth()) {
-                periods.forEachIndexed { index, period ->
-                    SegmentedButton(
-                        selected = state.period == period,
-                        onClick = { viewModel.setPeriod(period) },
-                        shape = SegmentedButtonDefaults.itemShape(index, periods.size),
-                    ) {
-                        Text(
-                            when (period) {
-                                HistoryPeriod.DAY -> "Día"
-                                HistoryPeriod.WEEK -> "Semana"
-                                HistoryPeriod.MONTH -> "Mes"
-                            },
-                        )
-                    }
-                }
-            }
+            com.nutriai.core.ui.components.GlassSegmented(
+                options = listOf("Día", "Semana", "Mes"),
+                selectedIndex = periods.indexOf(state.period),
+                onSelect = { viewModel.setPeriod(periods[it]) },
+            )
         }
         item {
             Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {

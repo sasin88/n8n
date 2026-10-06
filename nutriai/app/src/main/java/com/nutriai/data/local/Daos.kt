@@ -57,6 +57,9 @@ interface FoodDao {
     @Query("DELETE FROM food_portions WHERE foodId IN (:foodIds)")
     suspend fun deletePortionsFor(foodIds: List<String>)
 
+    @Query("DELETE FROM foods WHERE id = :id AND ownerProfileId IS NOT NULL")
+    suspend fun deleteUserFood(id: String)
+
     @Query("DELETE FROM recipe_components WHERE recipeId IN (:recipeIds)")
     suspend fun deleteComponentsFor(recipeIds: List<String>)
 
@@ -121,4 +124,40 @@ interface WeightDao {
 
     @Query("DELETE FROM weight_records WHERE id = :id")
     suspend fun delete(id: Long)
+}
+
+@Dao
+interface ActivityDao {
+    @Query("SELECT * FROM water_logs WHERE profileId = :profileId AND date BETWEEN :from AND :to ORDER BY createdAtEpochMs")
+    fun observeWater(profileId: Long, from: LocalDate, to: LocalDate): Flow<List<WaterLogEntity>>
+
+    @Insert
+    suspend fun insertWater(log: WaterLogEntity): Long
+
+    @Query("DELETE FROM water_logs WHERE id = (SELECT id FROM water_logs WHERE profileId = :profileId AND date = :date ORDER BY createdAtEpochMs DESC LIMIT 1)")
+    suspend fun deleteLastWater(profileId: Long, date: LocalDate)
+
+    @Query("SELECT * FROM exercise_logs WHERE profileId = :profileId AND date BETWEEN :from AND :to ORDER BY id")
+    fun observeExercise(profileId: Long, from: LocalDate, to: LocalDate): Flow<List<ExerciseLogEntity>>
+
+    @Insert
+    suspend fun insertExercise(log: ExerciseLogEntity): Long
+
+    @Query("DELETE FROM exercise_logs WHERE id = :id")
+    suspend fun deleteExercise(id: Long)
+
+    @Query("SELECT * FROM fasting_sessions WHERE profileId = :profileId AND endEpochMs IS NULL ORDER BY startEpochMs DESC LIMIT 1")
+    fun observeActiveFast(profileId: Long): Flow<FastingSessionEntity?>
+
+    @Query("SELECT * FROM fasting_sessions WHERE profileId = :profileId AND endEpochMs IS NOT NULL ORDER BY startEpochMs DESC LIMIT :limit")
+    fun observeFastHistory(profileId: Long, limit: Int): Flow<List<FastingSessionEntity>>
+
+    @Insert
+    suspend fun insertFast(session: FastingSessionEntity): Long
+
+    @Query("UPDATE fasting_sessions SET endEpochMs = :endEpochMs WHERE id = :id")
+    suspend fun finishFast(id: Long, endEpochMs: Long)
+
+    @Query("DELETE FROM fasting_sessions WHERE id = :id")
+    suspend fun deleteFast(id: Long)
 }

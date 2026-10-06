@@ -1,5 +1,6 @@
 package com.nutriai.data.local
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.Index
@@ -32,6 +33,11 @@ data class ProfileEntity(
     val countryCode: String?,
     val languageTag: String?,
     val createdAtEpochMs: Long,
+    /** Nombres de SecondaryGoal separados por '|'. */
+    @ColumnInfo(defaultValue = "''") val secondaryGoals: String = "",
+    val weeklyRateKg: Double? = null,
+    val waterGoalMl: Int? = null,
+    @ColumnInfo(defaultValue = "0") val exerciseAddsToBudget: Boolean = false,
 )
 
 /**
@@ -60,6 +66,8 @@ data class FoodEntity(
     val sourceReference: String?,
     val countryCode: String?,
     val ownerProfileId: Long?,
+    /** Nombres de FoodTag separados por '|'. */
+    @ColumnInfo(defaultValue = "''") val tags: String = "",
 )
 
 @Entity(
@@ -146,4 +154,53 @@ data class WeightRecordEntity(
     val profileId: Long,
     val date: LocalDate,
     val weightKg: Double,
+)
+
+@Entity(
+    tableName = "water_logs",
+    foreignKeys = [
+        ForeignKey(entity = ProfileEntity::class, parentColumns = ["id"], childColumns = ["profileId"], onDelete = ForeignKey.CASCADE),
+    ],
+    indices = [Index(value = ["profileId", "date"])],
+)
+data class WaterLogEntity(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val profileId: Long,
+    val date: LocalDate,
+    val ml: Int,
+    val createdAtEpochMs: Long,
+)
+
+@Entity(
+    tableName = "exercise_logs",
+    foreignKeys = [
+        ForeignKey(entity = ProfileEntity::class, parentColumns = ["id"], childColumns = ["profileId"], onDelete = ForeignKey.CASCADE),
+    ],
+    indices = [Index(value = ["profileId", "date"])],
+)
+data class ExerciseLogEntity(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val profileId: Long,
+    val date: LocalDate,
+    val type: String,
+    val minutes: Int,
+    val kcal: Int,
+    val estimated: Boolean,
+    val note: String?,
+)
+
+@Entity(
+    tableName = "fasting_sessions",
+    foreignKeys = [
+        ForeignKey(entity = ProfileEntity::class, parentColumns = ["id"], childColumns = ["profileId"], onDelete = ForeignKey.CASCADE),
+    ],
+    indices = [Index("profileId")],
+)
+data class FastingSessionEntity(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val profileId: Long,
+    val protocol: String,
+    val startEpochMs: Long,
+    val plannedEndEpochMs: Long,
+    val endEpochMs: Long?,
 )

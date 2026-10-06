@@ -82,8 +82,15 @@ class MealEditorViewModel @Inject constructor(
 
     init {
         when (mode) {
-            EditorMode.NEW -> _state.update {
-                it.copy(phase = EditorPhase.Editing, draft = MealDraft(type = initialType, date = initialDate, origin = MealOrigin.MANUAL))
+            EditorMode.NEW -> {
+                _state.update {
+                    it.copy(phase = EditorPhase.Editing, draft = MealDraft(type = initialType, date = initialDate, origin = MealOrigin.MANUAL))
+                }
+                if (route.foodId.isNotBlank()) viewModelScope.launch {
+                    val food = runCatching { foods.getFood(route.foodId) }.getOrNull() ?: return@launch
+                    val unit = MealDraft.defaultUnit(food)
+                    addItem(food, if (unit == PortionUnit.GRAM) 100.0 else 1.0, unit)
+                }
             }
             EditorMode.EDIT -> loadExisting(route.mealId)
             EditorMode.ANALYSIS -> analyze()

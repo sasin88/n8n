@@ -11,6 +11,7 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Icon
@@ -84,7 +85,7 @@ class WeightViewModel @Inject constructor(
 }
 
 @Composable
-fun WeightScreen(viewModel: WeightViewModel = hiltViewModel()) {
+fun WeightScreen(onBack: () -> Unit = {}, viewModel: WeightViewModel = hiltViewModel()) {
     val state by viewModel.state.collectAsStateWithLifecycle()
     var adding by remember { mutableStateOf(false) }
     LazyColumn(
@@ -92,7 +93,12 @@ fun WeightScreen(viewModel: WeightViewModel = hiltViewModel()) {
         contentPadding = PaddingValues(horizontal = 20.dp, vertical = 16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
-        item { Text("Peso", style = MaterialTheme.typography.headlineMedium) }
+        item {
+            com.nutriai.core.ui.components.GlassIconButton(onClick = onBack, contentDescription = "Volver") {
+                Icon(androidx.compose.material.icons.Icons.AutoMirrored.Filled.ArrowBack, null)
+            }
+            com.nutriai.core.ui.components.LargeTitle("Peso")
+        }
         item {
             AppearIn {
                 NutriCard {

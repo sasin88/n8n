@@ -53,6 +53,7 @@ data class CatalogRecipe(
     val countryCode: String? = null,
     val aliases: List<String> = emptyList(),
     val components: List<CatalogComponent>,
+    val tags: List<String> = emptyList(),
 )
 
 @Serializable
@@ -117,6 +118,7 @@ object CatalogMapper {
                 sourceReference = RECIPE_REFERENCE,
                 countryCode = recipe.countryCode,
                 ownerProfileId = null,
+                tags = recipe.tags.joinToString("|"),
             )
             recipePortions += FoodPortionEntity(recipe.id, PortionUnit.SERVING, total, "1 plato (receta aproximada)")
             components += recipe.components.map { RecipeComponentEntity(recipe.id, it.foodId, it.grams) }

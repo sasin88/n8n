@@ -138,7 +138,7 @@ fun MealEditorContent(
                         IconButton(onClick = { dialog = EditorDialog.DeleteMeal }) { Icon(Icons.Default.Delete, "Eliminar comida") }
                     }
                 },
-                colors = TopAppBarDefaults.topAppBarColors(containerColor = MaterialTheme.colorScheme.background),
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
             )
         },
         bottomBar = {
@@ -146,7 +146,7 @@ fun MealEditorContent(
                 SaveBar(enabled = draft.canSave, pending = draft.pendingCount, onSave = onSave)
             }
         },
-        containerColor = MaterialTheme.colorScheme.background,
+        containerColor = androidx.compose.ui.graphics.Color.Transparent,
     ) { padding ->
         AnimatedContent(
             targetState = state.phase::class,

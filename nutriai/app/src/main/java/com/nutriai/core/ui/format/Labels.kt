@@ -61,6 +61,53 @@ object Labels {
         ActivityLevel.VERY_ACTIVE -> "Muy activo"
     }
 
+    fun exercise(type: com.nutriai.domain.activity.ExerciseType) = when (type) {
+        com.nutriai.domain.activity.ExerciseType.WALKING -> "Caminar"
+        com.nutriai.domain.activity.ExerciseType.BRISK_WALKING -> "Caminar rápido"
+        com.nutriai.domain.activity.ExerciseType.RUNNING_8KMH -> "Correr (8 km/h)"
+        com.nutriai.domain.activity.ExerciseType.RUNNING_10KMH -> "Correr (10 km/h)"
+        com.nutriai.domain.activity.ExerciseType.CYCLING_MODERATE -> "Bicicleta"
+        com.nutriai.domain.activity.ExerciseType.SWIMMING_MODERATE -> "Natación"
+        com.nutriai.domain.activity.ExerciseType.STRENGTH_TRAINING -> "Pesas / fuerza"
+        com.nutriai.domain.activity.ExerciseType.YOGA -> "Yoga"
+        com.nutriai.domain.activity.ExerciseType.DANCING -> "Baile"
+        com.nutriai.domain.activity.ExerciseType.SOCCER -> "Fútbol"
+        com.nutriai.domain.activity.ExerciseType.OTHER -> "Otro"
+    }
+
+    fun exerciseEmoji(type: com.nutriai.domain.activity.ExerciseType) = when (type) {
+        com.nutriai.domain.activity.ExerciseType.WALKING, com.nutriai.domain.activity.ExerciseType.BRISK_WALKING -> "🚶"
+        com.nutriai.domain.activity.ExerciseType.RUNNING_8KMH, com.nutriai.domain.activity.ExerciseType.RUNNING_10KMH -> "🏃"
+        com.nutriai.domain.activity.ExerciseType.CYCLING_MODERATE -> "🚴"
+        com.nutriai.domain.activity.ExerciseType.SWIMMING_MODERATE -> "🏊"
+        com.nutriai.domain.activity.ExerciseType.STRENGTH_TRAINING -> "🏋️"
+        com.nutriai.domain.activity.ExerciseType.YOGA -> "🧘"
+        com.nutriai.domain.activity.ExerciseType.DANCING -> "💃"
+        com.nutriai.domain.activity.ExerciseType.SOCCER -> "⚽"
+        com.nutriai.domain.activity.ExerciseType.OTHER -> "✨"
+    }
+
+    fun tag(tag: com.nutriai.domain.model.FoodTag) = when (tag) {
+        com.nutriai.domain.model.FoodTag.HIGH_PROTEIN -> "Alta proteína"
+        com.nutriai.domain.model.FoodTag.LOW_CARB -> "Bajo en carbohidratos"
+        com.nutriai.domain.model.FoodTag.LOW_FAT -> "Bajo en grasa"
+        com.nutriai.domain.model.FoodTag.VEGETARIAN -> "Vegetariano"
+        com.nutriai.domain.model.FoodTag.VEGAN -> "Vegano"
+        com.nutriai.domain.model.FoodTag.BREAKFAST -> "Desayuno"
+        com.nutriai.domain.model.FoodTag.SNACK -> "Snack"
+        com.nutriai.domain.model.FoodTag.COSTA_RICA -> "Costa Rica"
+        com.nutriai.domain.model.FoodTag.QUICK -> "Rápido"
+    }
+
+    fun calorieRange(r: com.nutriai.domain.nutrition.CalorieRange) = if (r.max == null) "${r.min}+ kcal" else "${r.min}–${r.max} kcal"
+
+    fun duration(ms: Long): String {
+        val totalMin = ms / 60_000
+        return String.format(es, "%d:%02d", totalMin / 60, totalMin % 60)
+    }
+
+    fun clock(minuteOfDay: Int) = String.format(es, "%02d:%02d", minuteOfDay / 60, minuteOfDay % 60)
+
     fun themeMode(mode: ThemeMode) = when (mode) {
         ThemeMode.SYSTEM -> "Automático"
         ThemeMode.LIGHT -> "Claro"

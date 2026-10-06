@@ -47,10 +47,12 @@ import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
 import com.nutriai.core.ui.format.Labels
 
-/** Tarjeta suave con sombra mínima, base visual de la app. */
+/** Tarjeta de cristal: base visual de la app. */
 @Composable
 fun NutriCard(
     modifier: Modifier = Modifier,
@@ -58,18 +60,10 @@ fun NutriCard(
     contentPadding: PaddingValues = PaddingValues(20.dp),
     content: @Composable ColumnScope.() -> Unit,
 ) {
-    val shape = MaterialTheme.shapes.large
-    val colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
-    val elevation = CardDefaults.cardElevation(defaultElevation = 1.dp)
-    if (onClick != null) {
-        Card(onClick = onClick, modifier = modifier.fillMaxWidth(), shape = shape, colors = colors, elevation = elevation) {
-            Column(Modifier.padding(contentPadding), content = content)
-        }
-    } else {
-        Card(modifier = modifier.fillMaxWidth(), shape = shape, colors = colors, elevation = elevation) {
-            Column(Modifier.padding(contentPadding), content = content)
-        }
-    }
+    Column(
+        modifier.fillMaxWidth().glass(MaterialTheme.shapes.large, onClick = onClick).padding(contentPadding),
+        content = content,
+    )
 }
 
 /** Aparición progresiva (fade + desplazamiento), con retardo por posición. */
@@ -101,29 +95,89 @@ fun PrimaryButton(text: String, onClick: () -> Unit, modifier: Modifier = Modifi
     Button(
         onClick = onClick,
         enabled = enabled,
-        modifier = modifier.fillMaxWidth().height(54.dp),
-        shape = RoundedCornerShape(16.dp),
+        modifier = modifier.fillMaxWidth().height(56.dp),
+        shape = RoundedCornerShape(28.dp),
     ) { Text(text, style = MaterialTheme.typography.labelLarge) }
 }
 
+/** Botón de cristal (secundario). */
 @Composable
 fun SecondaryButton(text: String, onClick: () -> Unit, modifier: Modifier = Modifier, enabled: Boolean = true) {
-    OutlinedButton(
-        onClick = onClick,
-        enabled = enabled,
-        modifier = modifier.fillMaxWidth().height(54.dp),
-        shape = RoundedCornerShape(16.dp),
-    ) { Text(text, style = MaterialTheme.typography.labelLarge) }
+    val shape = RoundedCornerShape(28.dp)
+    Box(
+        modifier.fillMaxWidth().height(56.dp).glass(shape, onClick = if (enabled) onClick else null),
+        contentAlignment = Alignment.Center,
+    ) {
+        Text(
+            text,
+            style = MaterialTheme.typography.labelLarge,
+            color = if (enabled) MaterialTheme.colorScheme.primary else MaterialTheme.colorScheme.onSurfaceVariant,
+        )
+    }
 }
 
 @Composable
 fun DangerButton(text: String, onClick: () -> Unit, modifier: Modifier = Modifier) {
-    OutlinedButton(
-        onClick = onClick,
-        modifier = modifier.fillMaxWidth().height(54.dp),
-        shape = RoundedCornerShape(16.dp),
-        colors = ButtonDefaults.outlinedButtonColors(contentColor = MaterialTheme.colorScheme.error),
-    ) { Text(text, style = MaterialTheme.typography.labelLarge) }
+    Box(
+        modifier.fillMaxWidth().height(56.dp).glass(RoundedCornerShape(28.dp), onClick = onClick),
+        contentAlignment = Alignment.Center,
+    ) { Text(text, style = MaterialTheme.typography.labelLarge, color = MaterialTheme.colorScheme.error) }
+}
+
+/** Título grande al estilo iOS, con acción opcional a la derecha. */
+@Composable
+fun LargeTitle(title: String, subtitle: String? = null, modifier: Modifier = Modifier, trailing: @Composable (() -> Unit)? = null) {
+    Row(modifier.fillMaxWidth().padding(top = 8.dp, bottom = 4.dp), verticalAlignment = Alignment.CenterVertically) {
+        Column(Modifier.weight(1f)) {
+            if (subtitle != null) {
+                Text(subtitle.uppercase(), style = MaterialTheme.typography.labelMedium, color = MaterialTheme.colorScheme.onSurfaceVariant)
+            }
+            Text(title, style = MaterialTheme.typography.displaySmall)
+        }
+        trailing?.invoke()
+    }
+}
+
+/** Botón circular de cristal con un icono (p. ej. el avatar o "+"). */
+@Composable
+fun GlassIconButton(onClick: () -> Unit, contentDescription: String?, modifier: Modifier = Modifier, size: Dp = 44.dp, content: @Composable () -> Unit) {
+    Box(
+        modifier.size(size).glass(CircleShape, onClick = onClick).semantics { if (contentDescription != null) this.contentDescription = contentDescription },
+        contentAlignment = Alignment.Center,
+    ) { content() }
+}
+
+/** Pastilla de selección (filtros), de cristal cuando no está seleccionada. */
+@Composable
+fun GlassChip(text: String, selected: Boolean, onClick: () -> Unit, modifier: Modifier = Modifier) {
+    val shape = RoundedCornerShape(50)
+    val base = if (selected) modifier.clip(shape).background(MaterialTheme.colorScheme.primary).clickable(onClick = onClick) else modifier.glass(shape, onClick = onClick)
+    Box(base.padding(horizontal = 16.dp, vertical = 9.dp), contentAlignment = Alignment.Center) {
+        Text(
+            text,
+            style = MaterialTheme.typography.labelMedium,
+            color = if (selected) MaterialTheme.colorScheme.onPrimary else MaterialTheme.colorScheme.onSurface,
+        )
+    }
+}
+
+/** Control segmentado de cristal (Día / Semana / Mes…). */
+@Composable
+fun GlassSegmented(options: List<String>, selectedIndex: Int, onSelect: (Int) -> Unit, modifier: Modifier = Modifier) {
+    Row(modifier.fillMaxWidth().glass(RoundedCornerShape(50)).padding(4.dp)) {
+        options.forEachIndexed { index, label ->
+            val selected = index == selectedIndex
+            Box(
+                Modifier.weight(1f).clip(RoundedCornerShape(50))
+                    .background(if (selected) MaterialTheme.colorScheme.surface.copy(alpha = 0.9f) else Color.Transparent)
+                    .clickable { onSelect(index) }
+                    .padding(vertical = 9.dp),
+                contentAlignment = Alignment.Center,
+            ) {
+                Text(label, style = MaterialTheme.typography.labelMedium, fontWeight = if (selected) FontWeight.SemiBold else FontWeight.Normal)
+            }
+        }
+    }
 }
 
 /** Barra de progreso de un macronutriente frente a su objetivo. */

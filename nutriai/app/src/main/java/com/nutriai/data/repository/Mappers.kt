@@ -7,6 +7,14 @@ import com.nutriai.data.local.MealItemEntity
 import com.nutriai.data.local.ProfileEntity
 import com.nutriai.data.local.RecipeComponentEntity
 import com.nutriai.data.local.WeightRecordEntity
+import com.nutriai.data.local.WaterLogEntity
+import com.nutriai.data.local.ExerciseLogEntity
+import com.nutriai.data.local.FastingSessionEntity
+import com.nutriai.domain.activity.ExerciseType
+import com.nutriai.domain.activity.FastingProtocol
+import com.nutriai.domain.activity.FastingSession
+import com.nutriai.domain.model.ExerciseLog
+import com.nutriai.domain.model.WaterLog
 import com.nutriai.domain.model.FoodReference
 import com.nutriai.domain.model.Meal
 import com.nutriai.domain.model.MealItem
@@ -16,11 +24,15 @@ import com.nutriai.domain.model.RecipeComponent
 import com.nutriai.domain.model.UserProfile
 import com.nutriai.domain.model.WeightRecord
 
+internal inline fun <reified E : Enum<E>> String.toEnumSet(): Set<E> =
+    split('|').mapNotNull { name -> runCatching { enumValueOf<E>(name) }.getOrNull() }.toSet()
+
 internal fun ProfileEntity.toDomain() = UserProfile(
     id = id, name = name, sex = sex, ageYears = ageYears, weightKg = weightKg, heightCm = heightCm,
     activityLevel = activityLevel, goal = goal, targetWeightKg = targetWeightKg,
     manualCalorieTarget = manualCalorieTarget, unitSystem = unitSystem, countryCode = countryCode,
-    languageTag = languageTag,
+    languageTag = languageTag, secondaryGoals = secondaryGoals.toEnumSet(), weeklyRateKg = weeklyRateKg,
+    waterGoalMl = waterGoalMl, exerciseAddsToBudget = exerciseAddsToBudget,
 )
 
 internal fun UserProfile.toEntity(createdAtEpochMs: Long) = ProfileEntity(
@@ -28,6 +40,8 @@ internal fun UserProfile.toEntity(createdAtEpochMs: Long) = ProfileEntity(
     activityLevel = activityLevel, goal = goal, targetWeightKg = targetWeightKg,
     manualCalorieTarget = manualCalorieTarget, unitSystem = unitSystem, countryCode = countryCode,
     languageTag = languageTag, createdAtEpochMs = createdAtEpochMs,
+    secondaryGoals = secondaryGoals.joinToString("|") { it.name }, weeklyRateKg = weeklyRateKg,
+    waterGoalMl = waterGoalMl, exerciseAddsToBudget = exerciseAddsToBudget,
 )
 
 internal fun FoodEntity.nutrients() = Nutrients(energyKcal, proteinG, carbohydratesG, fatG, fiberG)
@@ -36,6 +50,7 @@ internal fun FoodEntity.nutrients() = Nutrients(energyKcal, proteinG, carbohydra
 internal fun FoodEntity.toReferenceStub() = FoodReference(
     id = id, name = name, nutrientsPerBasis = nutrients(), basis = basis, source = source,
     sourceReference = sourceReference, aliases = aliasList(), category = category, countryCode = countryCode,
+    tags = tags.toEnumSet(), isUserCreated = ownerProfileId != null,
 )
 
 internal fun FoodEntity.aliasList(): List<String> = aliases.split('|').filter { it.isNotBlank() }
@@ -67,6 +82,7 @@ internal fun FoodReference.toEntity(ownerProfileId: Long?) = FoodEntity(
     energyKcal = nutrientsPerBasis.energyKcal, proteinG = nutrientsPerBasis.proteinG,
     carbohydratesG = nutrientsPerBasis.carbohydratesG, fatG = nutrientsPerBasis.fatG, fiberG = nutrientsPerBasis.fiberG,
     source = source, sourceReference = sourceReference, countryCode = countryCode, ownerProfileId = ownerProfileId,
+    tags = tags.joinToString("|") { it.name },
 )
 
 internal fun MealItemEntity.toDomain() = MealItem(
@@ -94,3 +110,13 @@ internal fun Meal.toEntity() = MealEntity(
 internal fun WeightRecordEntity.toDomain() = WeightRecord(id, profileId, date, weightKg)
 
 internal fun WeightRecord.toEntity() = WeightRecordEntity(id, profileId, date, weightKg)
+
+internal fun WaterLogEntity.toDomain() = WaterLog(id, profileId, date, ml, createdAtEpochMs)
+
+internal fun ExerciseLogEntity.toDomain() = ExerciseLog(
+    id, profileId, date, runCatching { ExerciseType.valueOf(type) }.getOrDefault(ExerciseType.OTHER), minutes, kcal, estimated, note,
+)
+
+internal fun FastingSessionEntity.toDomain() = FastingSession(
+    id, profileId, runCatching { FastingProtocol.valueOf(protocol) }.getOrDefault(FastingProtocol.P16_8), startEpochMs, plannedEndEpochMs, endEpochMs,
+)

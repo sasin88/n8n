@@ -63,6 +63,7 @@ object CoreModule {
     @Provides fun provideFoodDao(db: NutriAiDatabase): FoodDao = db.foodDao()
     @Provides fun provideMealDao(db: NutriAiDatabase): MealDao = db.mealDao()
     @Provides fun provideWeightDao(db: NutriAiDatabase): WeightDao = db.weightDao()
+    @Provides fun provideActivityDao(db: NutriAiDatabase): com.nutriai.data.local.ActivityDao = db.activityDao()
 
     @Provides
     @Singleton
@@ -101,6 +102,10 @@ abstract class BindingsModule {
     @Binds abstract fun bindMealRepository(impl: MealRepositoryImpl): MealRepository
     @Binds abstract fun bindWeightRepository(impl: WeightRepositoryImpl): WeightRepository
     @Binds abstract fun bindFoodRepository(impl: FoodRepositoryImpl): FoodRepository
+    @Binds abstract fun bindWaterRepository(impl: com.nutriai.data.repository.WaterRepositoryImpl): com.nutriai.domain.repository.WaterRepository
+    @Binds abstract fun bindExerciseRepository(impl: com.nutriai.data.repository.ExerciseRepositoryImpl): com.nutriai.domain.repository.ExerciseRepository
+    @Binds abstract fun bindFastingRepository(impl: com.nutriai.data.repository.FastingRepositoryImpl): com.nutriai.domain.repository.FastingRepository
+    @Binds abstract fun bindRecipeRepository(impl: com.nutriai.data.repository.RecipeRepositoryImpl): com.nutriai.domain.repository.RecipeRepository
     @Binds abstract fun bindNetworkMonitor(impl: AndroidNetworkMonitor): NetworkMonitor
     @Binds abstract fun bindClock(impl: SystemClock): Clock
 }

@@ -98,10 +98,10 @@ fun PrivacyScreen(onBack: () -> Unit, viewModel: PrivacyViewModel = hiltViewMode
             TopAppBar(
                 title = { Text("Privacidad y datos") },
                 navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.AutoMirrored.Filled.ArrowBack, "Volver") } },
-                colors = TopAppBarDefaults.topAppBarColors(containerColor = MaterialTheme.colorScheme.background),
+                colors = TopAppBarDefaults.topAppBarColors(containerColor = androidx.compose.ui.graphics.Color.Transparent),
             )
         },
-        containerColor = MaterialTheme.colorScheme.background,
+        containerColor = androidx.compose.ui.graphics.Color.Transparent,
     ) { padding ->
         LazyColumn(
             Modifier.fillMaxSize().padding(padding),

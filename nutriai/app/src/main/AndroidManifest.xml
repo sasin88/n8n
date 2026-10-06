@@ -7,6 +7,8 @@
     <!-- La cámara se pide en tiempo de ejecución solo al abrir la pantalla de cámara. -->
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-feature android:name="android.hardware.camera" android:required="false" />
+    <!-- Solo se pide al activar un recordatorio (Android 13+). -->
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <application
         android:name=".NutriAiApp"

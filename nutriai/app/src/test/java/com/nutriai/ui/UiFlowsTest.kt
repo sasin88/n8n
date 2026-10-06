@@ -97,13 +97,13 @@ class UiFlowsTest {
                         data = ProfileWithTarget(profile, CalorieTargetCalculator().calculate(profile)),
                         consumed = Nutrients(1250.0, 60.0, 150.0, 40.0, 10.0),
                     ),
-                    onAnalyze = { analyzed = true }, onRegisterMeal = {}, onOpenDay = {}, onSwitchProfile = {},
+                    onAnalyze = { analyzed = true }, onRegisterMeal = {}, onOpenDay = {}, onOpenProfile = {},
                 )
             }
         }
         compose.onNodeWithText("≈ 1.250 kcal", substring = true).assertExists()
-        compose.onNodeWithText("2.000 kcal", substring = true).assertExists()
-        compose.onAllNodesWithText("750 kcal").onFirst().assertExists()
+        compose.onAllNodesWithText("2.000 kcal", substring = true).onFirst().assertExists()
+        compose.onNodeWithText("Agua").assertExists()
         compose.onNodeWithTag("analyze").performClick()
         assertTrue(analyzed)
     }
@@ -141,6 +141,36 @@ class UiFlowsTest {
         compose.onNodeWithTag("save_meal").assertIsEnabled().performClick()
         assertEquals(1, saves)
         compose.onNodeWithTag("total_kcal").assertExists()
+    }
+
+    @Test
+    fun onboarding_walksThroughStepsAndShowsPlan() {
+        var saved = false
+        compose.setContent {
+            var state by remember { mutableStateOf(com.nutriai.feature.onboarding.OnboardingState()) }
+            fun next() {
+                val steps = state.steps
+                state = state.copy(step = steps[(steps.indexOf(state.step) + 1).coerceAtMost(steps.size - 1)])
+            }
+            NutriAiTheme {
+                com.nutriai.feature.onboarding.OnboardingFlowContent(
+                    state = state,
+                    onChange = { state = it(state) },
+                    onNext = { next() },
+                    onBack = {},
+                    canContinue = true,
+                    onCalculated = { state = state.copy(step = com.nutriai.feature.onboarding.OnboardingStep.PLAN) },
+                    onSave = { saved = true },
+                    today = LocalDate.of(2026, 1, 1),
+                )
+            }
+        }
+        compose.onNodeWithTag("onboarding_next").performClick() // bienvenida
+        compose.onNodeWithTag("onboarding_name").performTextInput("Adrian")
+        compose.onNodeWithTag("onboarding_next").performClick()
+        compose.onNodeWithText("Perder peso").performClick()
+        compose.onNodeWithTag("onboarding_next").performClick()
+        compose.onNodeWithText("Omitir").assertExists()
     }
 
     @Test

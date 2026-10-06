@@ -43,6 +43,8 @@ class CatalogTest {
         assertEquals(NutritionSource.RECIPE, casado.source)
         assertTrue(rows.components.count { it.recipeId == "cr_casado" } >= 5)
         assertTrue(rows.portions.any { it.foodId == "cr_casado" && it.unit == PortionUnit.SERVING })
+        assertTrue(rows.foods.count { it.source == NutritionSource.RECIPE } >= 20)
+        assertTrue(rows.foods.first { it.id == "cr_gallo_pinto" }.tags.contains("VEGAN"))
     }
 
     @Test
